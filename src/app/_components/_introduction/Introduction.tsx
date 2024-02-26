@@ -1,7 +1,7 @@
 "use client";
 
 import Typewriter from 'typewriter-effect';
-import CubeSketch from '../Cube';
+import FadeInSection from '../FadeInSection/FadeInSection';
 import "./Introduction.css"; 
 import dynamic from 'next/dynamic';
 
@@ -17,25 +17,27 @@ export default function Introduction() {
                 <div className="mb-10">
                     <DynamicCubeSketch />
                 </div>
-                <div className='typewriter-style text-center'>
-                    <Typewriter
-                        onInit={(typewriter) => {
-                        // eslint-disable-next-line react/no-unescaped-entities
-                        typewriter.typeString("hey, i'm <strong>ethan</strong>")
-                        .pauseFor(1000)
-                        .start(); 
-                    }}
-                    options={{
-                        delay: 80
-                    }}
-                    />
-                    <div className='text-center'>
-                        <h2 className='text-4xl mt-5'>i make things sometimes</h2>
-                        <p className='mt-5 text-lg max-w-3xl text-center'>
-                        I&apos;m a first-gen, low-income junior at Northwestern University and aspiring full-stack Software Engineer. My interests include web development, human-computer interaction, cloud computing, and machine learning. Minus the jargon, I&apos;m passionate about building accessible, efficient, and easy-to-use tech solutions to empower communities and tackle real-world challenges.
-                        </p>
+                <FadeInSection delay={100}>
+                    <div className='typewriter-style text-center'>
+                        <Typewriter
+                            onInit={(typewriter) => {
+                            // eslint-disable-next-line react/no-unescaped-entities
+                            typewriter.typeString("hey, i'm <strong>ethan</strong>.")
+                            .pauseFor(1000)
+                            .start(); 
+                        }}
+                        options={{
+                            delay: 80
+                        }}
+                        />
+                        <div className='text-center'>
+                            <h2 className='text-4xl mt-5'>i make things sometimes.</h2>
+                            <p className='mt-5 text-lg max-w-3xl text-center'>
+                            I&apos;m a first-gen, low-income junior at Northwestern University and aspiring full-stack Software Engineer. My interests include web development, human-computer interaction, cloud computing, and machine learning. Minus the jargon, I&apos;m passionate about building accessible, efficient, and easy-to-use tech solutions to empower communities and tackle real-world challenges.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </FadeInSection>
             </div>
         </>
     );
