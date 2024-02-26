@@ -1,0 +1,10 @@
+/* styles.css */
+.typewriter-style .Typewriter__wrapper {
+    font-size: 60px; /* Change font size */
+    color: rgb(160,160,160); /* Change text color */
+}
+
+.typewriter-style .Typewriter__cursor {
+    font-size: 60px;
+    color: rgb(160,160,160); /* Change cursor color */
+}
