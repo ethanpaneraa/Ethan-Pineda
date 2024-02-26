@@ -1,10 +1,14 @@
 "use client";
-
 import { useEffect } from 'react';
 import p5 from 'p5';
 
 export default function CubeSketch() {
   useEffect(() => {
+
+    if (typeof window === 'undefined') {
+        return;
+    };
+
     let myp5: p5;
     const sketch = (p: p5) => {
         let theta22 = 0; // Angle for Z-axis rotation
