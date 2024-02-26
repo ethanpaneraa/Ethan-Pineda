@@ -30,9 +30,9 @@ export default function Introduction() {
                     }}
                     />
                     <div className='text-center'>
-                        <h2 className='text-3xl mt-5'>i make things sometimes</h2>
-                        <p className='mt-5 text-lg max-w-2xl text-center'>
-                        I&apos;m a first-gen, low-income junior at Northwestern University aiming to be a full-stack Software Engineer. My interests include web development, human-computer interaction, cloud computing, and machine learning. Simply put, I&apos;m passionate about developing accessible, efficient, and easy-to-use tech solutions to empower communities and tackle real-world challenges.
+                        <h2 className='text-4xl mt-5'>i make things sometimes</h2>
+                        <p className='mt-5 text-lg max-w-3xl text-center'>
+                        I&apos;m a first-gen, low-income junior at Northwestern University and aspiring full-stack Software Engineer. My interests include web development, human-computer interaction, cloud computing, and machine learning. Minus the jargon, I&apos;m passionate about building accessible, efficient, and easy-to-use tech solutions to empower communities and tackle real-world challenges.
                         </p>
                     </div>
                 </div>
