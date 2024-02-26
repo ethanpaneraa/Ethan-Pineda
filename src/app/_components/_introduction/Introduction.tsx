@@ -3,6 +3,11 @@
 import Typewriter from 'typewriter-effect';
 import CubeSketch from '../Cube';
 import "./Introduction.css"; 
+import dynamic from 'next/dynamic';
+
+const DynamicCubeSketch = dynamic(() => import('../Cube'), {
+    ssr: false
+});
 
 export default function Introduction() {
 
@@ -10,7 +15,7 @@ export default function Introduction() {
         <>
             <div className="flex flex-col items-center justify-center min-h-screen p-5 text-paragraph-gray">
                 <div className="mb-10">
-                    <CubeSketch />
+                    <DynamicCubeSketch />
                 </div>
                 <div className='typewriter-style text-center'>
                     <Typewriter
