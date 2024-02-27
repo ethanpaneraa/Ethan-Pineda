@@ -63,9 +63,9 @@ export default function CubeSketch() {
             });
     
             // Update angles for rotation
-            theta22 += 1.5;
-            phi += 0.4;
-            psi += 0.6;
+            theta22 += 1.3;
+            phi += 0.5;
+            psi += 0.5;
         }
     };
 
