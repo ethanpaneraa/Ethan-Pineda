@@ -1,6 +1,6 @@
 "use client";
 import FadeInSection from "../FadeInSection/FadeInSection";
-
+import SectionHeader from "../ui/SectionHeader";
 export default function About() {
     const myTechStack: string[] = [
         "TypeScript",
@@ -12,18 +12,13 @@ export default function About() {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
             <FadeInSection delay={100}>
                 <div className="text-left w-full">
-                    <div className="max-w-2xl flex items-center">
-                        <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold mb-10 flex-shrink-0">
-                            {"</about-me>"}
-                        </h2>
-                        <span className="h-px bg-paragraph-gray flex-grow ml-4 mb-8" />
-                    </div>
+                    <SectionHeader title="about-me" />
                 </div>
                 <div className="mt-5 w-full flex flex-col md:flex-row justify-center items-center md:items-start text-md">
-                    <div className="w-full md:max-w-lg lg:max-w-2xl mb-6 md:mb-0 md:pr-4 lg:pr-8">
+                    <div className="w-full mb-6 md:mb-0 md:pr-4 lg:pr-8">
                         <p className="mb-4">I am currently a third-year at
                             <a href="https://www.northwestern.edu/about/" target="_blank" rel="noopener noreferrer" className="text-orange no-underline">
                                 {" "}Northwestern University
