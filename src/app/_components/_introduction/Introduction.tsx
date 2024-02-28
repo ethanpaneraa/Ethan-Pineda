@@ -30,7 +30,7 @@ export default function Introduction() {
                                 }}
                             />
                             <div className='text-left'>
-                                <h2 className='text-4xl mt-5'>i make things sometimes.</h2>
+                                <h2 className='text-4xl mt-5'>i build things sometimes.</h2>
                             </div>
                             <p className='mt-5 text-md text-left mb-20 lg:w-3/4'>
                                 I&apos;m a first-gen, low-income junior at Northwestern University and aspiring full-stack Software Engineer. My interests include web development, human-computer interaction, cloud computing, and machine learning. Minus the jargon, I&apos;m passionate about building accessible, efficient, and easy-to-use tech solutions to empower communities and tackle real-world challenges.

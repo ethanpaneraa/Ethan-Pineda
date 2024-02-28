@@ -1,6 +1,6 @@
 /* Base size */
 .typewriter-style .Typewriter__wrapper {
-    font-size: 3.25rem; /* 36px remains as the base size */
+    font-size: 3rem; /* 36px remains as the base size */
     line-height: 5rem; /* 40px */
     color: rgb(160,160,160);
 }
@@ -21,13 +21,13 @@
 @media (min-width: 768px) { /* Tailwind's 'md' breakpoint */
     .typewriter-style .Typewriter__wrapper,
     .typewriter-style .Typewriter__cursor {
-        font-size: 4rem; /* Increased for medium screens */
+        font-size: 4.5rem; /* Increased for medium screens */
     }
 }
 
 @media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
     .typewriter-style .Typewriter__wrapper,
     .typewriter-style .Typewriter__cursor {
-        font-size: 5rem; /* Further increased for large screens */
+        font-size: 4.5rem; /* Further increased for large screens */
     }
 }
