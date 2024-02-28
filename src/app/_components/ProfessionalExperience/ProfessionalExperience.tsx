@@ -33,14 +33,14 @@ export default function ProfessionalExperience() {
             duration: "March 2022 - Present",
             title: "Undergraduate Research Assistant",
             link: "https://tiilt.northwestern.edu/", 
-            description: "Worked with the BLINC project to improve a learning analytics platform, developed a new data structure in Racket, and contributed to a related paper.",
+            description: "Worked with the BLINC project to improve a learning analytics platform for students and educators, spearheaded transition from Angular to React, and implemented new UI/UX features.",
         },
         {
             company: "Northwestern University",
             duration: "June 2022 - Present", 
             title: "Undergraduate Teaching Assistant", 
             link: "https://www.mccormick.northwestern.edu/computer-science/", 
-            description: "Supported 800+ students in Data Structures and Algorithms, contributed to grading and feedback, and received the Outstanding Peer Mentor Award.",
+            description: "Supported 800+ students in Data Structures and Algorithms, contributed to grading and feedback, and received the Outstanding Peer Mentor Award in Fall 2022.",
         },
         {
             company: "CodePath", 
