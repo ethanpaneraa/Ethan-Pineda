@@ -84,7 +84,7 @@ export default function ProfessionalExperience() {
                             {myProfessionalExperience.map((experience, index) => (
                                 <li key={index} className="mb-10 ml-4 w-md">
                                     <div className="absolute w-3 h-3 bg-paragraph-gray rounded-full mt-1.5 -start-1.5 border border-paragraph-gray dark:border-paragraph-gray dark:bg-paragraph-gray"></div>
-                                    <div className="w-full sm:w-full md:w-5/6">
+                                    <div className="w-full sm:w-full md:w-5/6 lg:w-5/6 xl:w-5/6">
                                         <time className="mb-1 text-md font-normal text-sm leading-none text-paragraph-gray dark:text-paragraph-gray">{experience.duration}</time>
                                         <h3 className="text-2xl font-bold text-paragraph-gray dark:text-paragraph-gray">{experience.company}</h3>
                                         <h4 className="mb-1 text-lg font-semibold text-paragraph-gray dark:text-paragraph-gray">{experience.title}</h4>
