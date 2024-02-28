@@ -12,7 +12,7 @@ export default function About() {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
+        <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10">
             <FadeInSection delay={100}>
                 <div className="text-left w-full">
                     <SectionHeader title="about-me" />
@@ -49,7 +49,7 @@ export default function About() {
                         </p>
                     </div>
                     <div className="flex justify-center lg:pl-10 mb-6 md:mb-0">
-                        <img src="/me.jpg" className="max-w-xs md:max-w-18 h-auto rounded-lg shadow-lg border-none hover:translate-y-[-7px] transition duration-300"/>
+                        <img src="/yo.jpeg" className="max-w-xs md:max-w-18 h-auto rounded-lg shadow-lg border-none hover:translate-y-[-7px] transition duration-300"/>
                     </div>
                 </div>
             </FadeInSection>

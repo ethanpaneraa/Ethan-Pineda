@@ -14,11 +14,11 @@ export default function CubeSketch() {
         let theta22 = 0; // Angle for Z-axis rotation
         let phi = 0; // Angle for X-axis rotation
         let psi = 0; // Angle for Y-axis rotation
-        let a = 150; // Size of the cube side
+        let a = 180; // Size of the cube side
         let d = 50; // Distance for perspective
     
         p.setup = function() {
-            p.createCanvas(285, 285, p.WEBGL);
+            p.createCanvas(375, 375, p.WEBGL);
             p.angleMode(p.DEGREES);
         }
         p.draw = () => {
