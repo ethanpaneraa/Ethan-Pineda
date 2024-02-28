@@ -1,6 +1,6 @@
 /* Base size */
 .typewriter-style .Typewriter__wrapper {
-    font-size: 4rem; /* 36px remains as the base size */
+    font-size: 3.25rem; /* 36px remains as the base size */
     line-height: 5rem; /* 40px */
     color: rgb(160,160,160);
 }
