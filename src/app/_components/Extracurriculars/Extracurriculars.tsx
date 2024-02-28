@@ -69,7 +69,7 @@ export default function Extracurriculars() {
                         {myExtracurriculars.map((activity, index) => (
                             <li key={index} className="mb-10 ml-4 w-md">
                                 <div className="absolute w-3 h-3 bg-paragraph-gray rounded-full mt-1.5 -start-1.5 border border-orange dark:orange dark:bg-orange"></div>
-                                <div className="w-full">
+                                <div className="w-full sm:w-full md:w-5/6 lg:w-5/6 xl:w-5/6">
                                     <time className="mb-1 text-sm font-normal leading-none text-paragraph-gray dark:text-paragraph-gray">{activity.duration}</time>
                                     <a href={activity.link} target="_blank"><h3 className="text-2xl font-bold text-orange">{activity.organization}</h3></a>
                                     <h4 className="mb-1 text-lg font-medium text-paragraph-gray dark:text-paragraph-gray">{activity.position}</h4>
