@@ -2,6 +2,8 @@
 
 import SectionHeader from "../ui/SectionHeader";
 import FadeInSection from "../FadeInSection/FadeInSection";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
 
 interface Project {
   title: string;
@@ -74,17 +76,13 @@ export default function FeaturedProjects() {
                           {project.github && (
                             <a href={project.github} className="text-orange inline-flex items-center md:mb-2 lg:mb-0">
                               GitHub
-                              <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
+                              <GitHubIcon className="ml-2" />
                             </a>
                           )}
                           {project.external && (
                             <a href={project.external} className="ml-4 text-orange inline-flex items-center">
                               Visit
-                              <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
+                              <OpenInBrowserIcon className="ml-2" />
                             </a>
                           )}
                         </div>
