@@ -70,24 +70,25 @@ export default function OtherProjects() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg gap-4">
                     {myOtherProjects.map((project, index) => (
                         <div key={index} className="flex flex-col bg-card-background rounded-lg shadow-md overflow-hidden transform transition-all hover:-translate-y-2 duration-300 p-6">
-                            <div className="flex items-center justify-between">
+                            <div className="flex items-center justify-end">
                                 <div className="flex items-center gap-2">
-                                    {project.github && <a
+                                    {project.github && 
+                                        <a
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-white"
-                                    >   
-                                        <GitHubIcon className="h-6 w-6 text-white" />
-                                    </a>}
-                                     {project.external && <a
-                                        href={project.external}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-white"
-                                    >
-                                        <OpenInBrowserIcon className="h-6 w-6 text-white" />
-                                    </a>}
+                                        className="text-paragraph-gray"
+                                        >   
+                                        <GitHubIcon className="h-6 w-6 text-paragraph-gray" />
+                                        </a>}{project.external && 
+                                            <a
+                                            href={project.external}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-paragraph-gray"
+                                            >
+                                            <OpenInBrowserIcon className="h-6 w-6 text-paragraph-gray" />
+                                            </a>}
                                 </div>
                             </div>
                             <h3 className="mt-4 text-xl font-bold text-orange">{project.title}</h3>
