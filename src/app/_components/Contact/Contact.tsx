@@ -14,7 +14,7 @@ export default function Contact() {
                     <SectionHeader title="get-in-touch" />
                 </div>
                 <div className="max-w-screen-sm">
-                    <p className="text-left text-paragraph-gray">I'm currently not looking for any new opportunities for the summer of 2024, but will I will be interested in any opportunities for Spring 2024, Fall 2024, Winter 2025, and spring 2025 internships. Feel free to ask me anything or just say hi!</p>
+                    <p className="text-left text-paragraph-gray">I&apos;m currently not looking for any new opportunities for the summer of 2024, but will I will be interested in any opportunities for Spring 2024, Fall 2024, Winter 2025, and spring 2025 internships. Feel free to ask me anything or just say hi!</p>
                     <div className="flex items-center justify-start gap-4 mt-5">
                         <a
                             href="mailto:ethanpineda2025@u.northwestern.edu
@@ -24,7 +24,7 @@ export default function Contact() {
                             className="text-orange"
                         >   
                             <EmailIcon className="h-6 w-6 text-orange" />
-                        </a>
+                    </a>
                         <a
                             href="https://www.linkedin.com/in/ethanpineda/"
                             target="_blank"
