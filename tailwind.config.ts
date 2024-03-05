@@ -15,7 +15,8 @@ const config: Config = {
       },
       colors: {
         'paragraph-gray': '#bdbdbd', 
-        'orange': '#48c09d'
+        'orange': '#48c09d', 
+        'card-background': '#1a1a1a', 
       }
     },
   },

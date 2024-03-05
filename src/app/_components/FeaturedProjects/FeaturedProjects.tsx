@@ -2,7 +2,6 @@
 
 import SectionHeader from "../ui/SectionHeader";
 import FadeInSection from "../FadeInSection/FadeInSection";
-import { useRef } from "react";
 
 interface Project {
   title: string;
@@ -14,44 +13,44 @@ interface Project {
 }
 
 export default function FeaturedProjects() {
-    const myFeaturedProjects: Array<Project>= [
-        {
-            title: "Instagram Clone", 
-            tech: ["Next.js (React)", "Tailwind CSS", "Node.js", "Express", "AWS"],
-            github: "https://github.com/ethanpaneraa/comp-sci-310-final-project-instagram-clone", 
-            external: "https://www.youtube.com/watch?v=RQouj55P76w",
-            description: "A full-stack Instagram clone with user authentication, image uploading, and image feed.",
-            image: "/InstagramClone.png"
-        },
-        {
-            title: "Emerging Coders Website", 
-            tech: ["Next.js (React)", "Tailwind CSS", "Node.js", "Express", "Supabase"],
-            github: "https://github.com/Emerging-Coders-Repositories/Emerging-Coders-Website",
-            external: "https://emerging-coders-website.vercel.app/",
-            description: "The official website for the Emerging Coders student organization at Northwestern University. ",
-            image: "/EmergingCodersWebsite.png"
-        },
-        {
-          title: "Chicago Crime Interactive Map", 
-          tech: ["JavaScript", "HTML/CSS", "D3.js", "jQuery"],
-          github: "https://github.com/ethanpaneraa/comp-sci-333-final",
-          description: "An interactive map of Chicago crime data from 2012 - 2016 broken down by ward, crime type, and frequency. ",
-          image: "/DataVisFinal.png"
-        }, 
-        {
-          title: "Terrenos", 
-          tech: ["C#", "Unity"],
-          github: "https://github.com/ethanpaneraa/Terrenos", 
-          external: "", 
-          description: "A 2D hybird between popular games Minecraft and Terria mixed with RPG game elements. Built with Antonio Rocha and Arturo Fonseca", 
-          image: "/Terrenos.png"
-        },
-    ];
+  const myFeaturedProjects: Array<Project>= [
+    {
+      title: "HomeHeart", 
+      tech: ["React", "Node.js", "Express", "PostgresSQL", "Python", "Flask", "Sci-kit Learn"],
+      github: "https://github.com/FTL-HomeHeart/Homeheart-Project", 
+      external: "https://www.homeheart.org/",
+      description: "A telemedicine platform that connects immigrant patients to mental health speciliast from their native countries. Built with Richmond Akondo and Nathnael Mekonnen.",
+      image: "/HomeHeart.png"
+    },
+    {
+      title: "Instagram Clone", 
+      tech: ["Next.js (React)", "Tailwind CSS", "Node.js", "Express", "AWS"],
+      github: "https://github.com/ethanpaneraa/comp-sci-310-final-project-instagram-clone", 
+      external: "https://homeheartuiethan.onrender.com/",
+      description: "A full-stack Instagram clone with user authentication, image uploading, and an image feed where users can like and comment on posts as well as follow other users.",
+      image: "/InstagramClone.png"
+    },
+    {
+      title: "Emerging Coders Website", 
+      tech: ["Next.js (React)", "Tailwind CSS", "Node.js", "Express", "Supabase"],
+      github: "https://github.com/Emerging-Coders-Repositories/Emerging-Coders-Website",
+      external: "https://emerging-coders-website.vercel.app/",
+      description: "The official website for the Emerging Coders student organization at Northwestern University.",
+      image: "/EmergingCodersWebsite.png"
+    },
+    {
+      title: "Chicago Crime Interactive Map", 
+      tech: ["JavaScript", "HTML/CSS", "D3.js", "jQuery"],
+      github: "https://github.com/ethanpaneraa/comp-sci-333-final",
+      description: "An interactive map of Chicago crime data from 2012 - 2016 broken down by ward, crime type, and frequency. ",
+      image: "/DataVisFinal.png"
+    }, 
+  ];
 
     
     return (
       <>
-        <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
+        <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10">
           <FadeInSection delay={100}>
             <div className="text-left w-full">
               <SectionHeader title="things-i-built"/>

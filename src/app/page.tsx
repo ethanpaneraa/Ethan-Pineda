@@ -3,6 +3,7 @@ import About from "./_components/About/About";
 import ProfessionalExperience from "./_components/ProfessionalExperience/ProfessionalExperience";
 import Extracurriculars from "./_components/Extracurriculars/Extracurriculars";
 import FeaturedProjects from "./_components/FeaturedProjects/FeaturedProjects";
+import OtherProjects from "./_components/OtherProjects/OtherProjects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ProfessionalExperience />
       <Extracurriculars /> 
       <FeaturedProjects /> 
+      <OtherProjects />
     </main>
   );
 }
