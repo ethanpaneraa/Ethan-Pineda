@@ -72,7 +72,7 @@ export default function OtherProjects() {
                     {myOtherProjects.map((project, index) => (
                     <div key={index} className="flex flex-col bg-card-background rounded-lg shadow-md overflow-hidden transform transition-all hover:-translate-y-2 duration-300 p-6">
                         <div className="flex justify-between items-start mb-4">
-                            <h3 className="text-xl font-bold text-orange">{project.title}</h3>
+                            <h3 className="text-xl font-semibold text-orange">{project.title}</h3>
                             <div className="flex items-center gap-2">
                                 {project.github && (
                                     <a

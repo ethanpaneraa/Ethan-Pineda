@@ -32,7 +32,7 @@ export default function FeaturedProjects() {
       description: "A full-stack Instagram clone with user authentication, image uploading, and an image feed where users can like and comment on posts as well as follow other users.",
       image: "/InstagramClone.png"
     },
-    {
+  {
       title: "Emerging Coders Website", 
       tech: ["Next.js (React)", "Tailwind CSS", "Node.js", "Express", "Supabase"],
       github: "https://github.com/Emerging-Coders-Repositories/Emerging-Coders-Website",
@@ -52,7 +52,7 @@ export default function FeaturedProjects() {
     
     return (
       <>
-        <div className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
+        <div id="projects" className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
           <FadeInSection delay={100}>
             <div className="text-left w-full max-w-screen-lg">
               <div className="text-left w-full">
@@ -66,7 +66,7 @@ export default function FeaturedProjects() {
                           <img src={project.image} alt={project.title} className="rounded-lg sm:w-48" />
                         </div>
                         <div className="flex-grow sm:pl-8">
-                          <h2 className="title-font font-medium text-lg text-orange">{project.title}</h2>
+                          <h2 className="title-font font-semibold text-lg text-orange">{project.title}</h2>
                           <p className="mb-2">{project.description}</p>
                           <div className="flex-wrap mb-4">
                             {project.tech.map((tech, i) => (

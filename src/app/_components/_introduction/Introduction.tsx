@@ -2,6 +2,7 @@
 
 import Typewriter from 'typewriter-effect';
 import FadeInSection from '../FadeInSection/FadeInSection';
+import ResumeButton from '../ResumeButton/ResumeButton';
 import dynamic from 'next/dynamic';
 import "./Introduction.css"; 
 

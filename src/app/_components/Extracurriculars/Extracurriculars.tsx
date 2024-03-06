@@ -46,7 +46,7 @@ export default function Extracurriculars() {
     
     return (
         <>
-            <div className="flex flex-col items-center justify-center  text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
+            <div id="organizations" className="flex flex-col items-center justify-center  text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
                 <FadeInSection delay={100}>
                     <div className="text-left w-full max-w-screen-lg">
                         <div className="text-left w-full">

@@ -17,6 +17,8 @@ const config: Config = {
         'paragraph-gray': '#bdbdbd', 
         'orange': '#48c09d', 
         'card-background': '#1a1a1a', 
+        "test-color": `#121212`, 
+        'navbar-color': '#101010',
       }
     },
   },

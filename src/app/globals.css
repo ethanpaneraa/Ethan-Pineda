@@ -40,3 +40,32 @@ body {
   transform: none;
   visibility: visible;
 }
+
+/* Slide-in animation */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide-out animation */
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Animation classes */
+.animate-slide-in {
+  animation: slideInFromRight 0.3s forwards;
+}
+
+.animate-slide-out {
+  animation: slideOutToRight 0.3s forwards;
+}

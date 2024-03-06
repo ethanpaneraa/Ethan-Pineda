@@ -6,6 +6,7 @@ import Extracurriculars from "./_components/Extracurriculars/Extracurriculars";
 import FeaturedProjects from "./_components/FeaturedProjects/FeaturedProjects";
 import OtherProjects from "./_components/OtherProjects/OtherProjects";
 import Contact from "./_components/Contact/Contact";
+import Footer from "./ui/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <FeaturedProjects /> 
       <OtherProjects />
       <Contact />
+      <Footer /> 
     </main>
   );
 }

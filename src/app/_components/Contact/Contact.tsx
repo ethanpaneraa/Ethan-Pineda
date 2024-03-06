@@ -9,7 +9,7 @@ export default function Contact() {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-lg mx-auto mb-10 md:py-36">
+            <div id="contact" className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-lg mx-auto mb-10 md:py-36">
                 <h2 className="text-4xl sm:text-4xl md:text-4xl font-bold mb-10 flex-shrink-0">
                     {`</${"get-in-touch"}>`}
                 </h2>
