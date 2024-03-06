@@ -1,6 +1,6 @@
 "use client";
 import FadeInSection from "../FadeInSection/FadeInSection";
-import SectionHeader from "../ui/SectionHeader";
+import SectionHeader from "../../ui/SectionHeader";
 export default function About() {
     const myTechStack: string[] = [
         "TypeScript",

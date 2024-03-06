@@ -1,6 +1,6 @@
 "use client"; 
 
-import SectionHeader from "../ui/SectionHeader";
+import SectionHeader from "../../ui/SectionHeader";
 import FadeInSection from "../FadeInSection/FadeInSection";
 
 interface ProfessionalExperienceObject {
@@ -54,35 +54,35 @@ export default function ProfessionalExperience() {
             duration: "January 2023 - June 2023",
             title: "Student Software Engineering",
             link: "https://www.ycombinator.com/companies/ruta-health", 
-            description: "Contributed to a healthcare startup by leading frontend development with React and Node.js, enhancing product performance and scalability.",
+            description: "Contributed to a healthcare startup by leading frontend development with React and Node.js, enhancing product performance and scalability. ",
         }, 
     ];
 
     return (
-        <>
-            <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mt-10 mx-auto mb-10 md:py-36">
-                <FadeInSection delay={100}>
-                    <div className="text-left w-full">
-                        <SectionHeader title="where-i-work" />
-                    </div>
-                        <ol className="relative border-s border-paragraph-gray dark:border-paragraph-gray">
-                            {myProfessionalExperience.map((experience, index) => (
-                                <li key={index} className="mb-10 ml-4 w-md">
-                                    <div className="absolute w-3 h-3 bg-paragraph-gray rounded mt-1.5 -start-1.5 border border-orange dark:border-orange dark:bg-orange"></div>
-                                    <div className="w-full sm:w-full md:w-5/6 lg:w-5/6 xl:w-5/6">
-                                        <time className="mb-1 text-md font-normal text-sm leading-none text-paragraph-gray dark:text-paragraph-gray">{experience.duration}</time>
-                                        <a href={experience.link} target="_blank"><h3 className="text-2xl font-bold text-orange">{experience.company}</h3></a>
-                                        <h4 className="mb-1 text-lg font-medium text-paragraph-gray dark:text-paragraph-gray">{experience.title}</h4>
-                                        <div className="mb-4">
-                                            <span className="text-orange mr-2">▹</span>
-                                            <span className="text-base font-normal text-paragraph-gray">{experience.description}</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            ))}
-                        </ol>
-                </FadeInSection>
-            </div>
-        </>
-    );
+    <>
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 mx-aut text-paragraph-gray mb-10 md:py-36">
+            <FadeInSection delay={100}>
+                <div className="text-left w-full max-w-screen-lg">
+                    <SectionHeader title="where-i-work" />
+                    <ol className="relative border-l border-paragraph-gray dark:border-paragraph-gray mx-auto">
+                        {myProfessionalExperience.map((experience, index) => (
+                            <li key={index} className="mb-10 pl-4">
+                                <div className="absolute w-3 h-3 bg-paragraph-gray rounded mt-1.5 -start-1.5 border border-orange dark:orange dark:bg-orange"></div>
+                                <div className="w-full xl:w-11/12">
+                                    <time className="mb-1 text-md font-normal leading-none text-paragraph-gray">{experience.duration}</time>
+                                    <a href={experience.link} target="_blank" rel="noopener noreferrer">
+                                        <h3 className="text-2xl font-bold text-orange">{experience.company}</h3>
+                                    </a>
+                                    <h4 className="mb-1 text-lg font-medium text-paragraph-gray">{experience.title}</h4>
+                                    <p className="mb-4 text-base font-normal text-paragraph-gray">{experience.description}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            </FadeInSection>
+        </div>
+    </>
+);
+
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeader from "../ui/SectionHeader";
+import SectionHeader from "../../ui/SectionHeader";
 import FadeInSection from "../FadeInSection/FadeInSection";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
@@ -52,45 +52,47 @@ export default function FeaturedProjects() {
     
     return (
       <>
-        <div className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10 md:py-36">
+        <div className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
           <FadeInSection delay={100}>
-            <div className="text-left w-full">
-              <SectionHeader title="things-i-built"/>
-            </div>
-              <div className="flex flex-col -m-4">
-                {myFeaturedProjects.map((project, index) => (
-                  <div key={index} className="p-4 sm:w-full md:w-5/6 lg:w-5/6 xl:w-5/6">
-                    <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                      <div className="flex-shrink-0 w-full sm:w-48 sm:h-full h-64 relative mb-4 sm:mb-0">
-                        <img src={project.image} alt={project.title} className="rounded-lg sm:w-48" />
-                      </div>
-                      <div className="flex-grow sm:pl-8">
-                        <h2 className="title-font font-medium text-lg text-orange">{project.title}</h2>
-                        <p className="mb-2">{project.description}</p>
-                        <div className="flex-wrap mb-4">
-                          {project.tech.map((tech, i) => (
-                            <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tech}</span>
-                          ))}
+            <div className="text-left w-full max-w-screen-lg">
+              <div className="text-left w-full">
+                <SectionHeader title="things-i-built"/>
+              </div>
+                <div className="flex flex-col -m-4">
+                  {myFeaturedProjects.map((project, index) => (
+                    <div key={index} className="p-4 w-full xl:w-11/12">
+                      <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <div className="flex-shrink-0 w-full sm:w-48 sm:h-full h-64 relative mb-4 sm:mb-0">
+                          <img src={project.image} alt={project.title} className="rounded-lg sm:w-48" />
                         </div>
-                        <div className="flex justify-center sm:justify-start items-center">
-                          {project.github && (
-                            <a href={project.github} className="text-orange inline-flex items-center md:mb-2 lg:mb-0">
-                              GitHub
-                              <GitHubIcon className="ml-2 w-5 h-5" />
-                            </a>
-                          )}
-                          {project.external && (
-                            <a href={project.external} className="ml-4 text-orange inline-flex items-center">
-                              Visit
-                              <OpenInBrowserIcon className="ml-2 h-6 w-6" />
-                            </a>
-                          )}
+                        <div className="flex-grow sm:pl-8">
+                          <h2 className="title-font font-medium text-lg text-orange">{project.title}</h2>
+                          <p className="mb-2">{project.description}</p>
+                          <div className="flex-wrap mb-4">
+                            {project.tech.map((tech, i) => (
+                              <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tech}</span>
+                            ))}
+                          </div>
+                          <div className="flex justify-center sm:justify-start items-center">
+                            {project.github && (
+                              <a href={project.github} className="text-orange inline-flex items-center md:mb-2 lg:mb-0">
+                                GitHub
+                                <GitHubIcon className="ml-2 w-5 h-5" />
+                              </a>
+                            )}
+                            {project.external && (
+                              <a href={project.external} className="ml-4 text-orange inline-flex items-center">
+                                Visit
+                                <OpenInBrowserIcon className="ml-2 h-6 w-6" />
+                              </a>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+            </div>
           </FadeInSection>
         </div>
       </>

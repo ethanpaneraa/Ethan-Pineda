@@ -1,6 +1,6 @@
 "use client"; 
 
-import SectionHeader from "../ui/SectionHeader";
+import SectionHeader from "../../ui/SectionHeader";
 import FadeInSection from "../FadeInSection/FadeInSection";
 
 interface ExtracurricularObject {
@@ -46,27 +46,29 @@ export default function Extracurriculars() {
     
     return (
         <>
-            <div className="flex flex-col items-center justify-center  text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10 md:py-36">
+            <div className="flex flex-col items-center justify-center  text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
                 <FadeInSection delay={100}>
-                    <div className="text-left w-full">
-                        <SectionHeader title="my-involvement" />
-                    </div>
-                    <ol className="relative border-s border-paragraph-gray dark:border-paragraph-gray">
-                        {myExtracurriculars.map((activity, index) => (
-                            <li key={index} className="mb-10 ml-4 w-md">
-                                <div className="absolute w-3 h-3 bg-paragraph-gray rounded mt-1.5 -start-1.5 border border-orange dark:orange dark:bg-orange"></div>
-                                <div className="w-full sm:w-full md:w-5/6 lg:w-5/6 xl:w-5/6">
-                                    <time className="mb-1 text-sm font-normal leading-none text-paragraph-gray dark:text-paragraph-gray">{activity.duration}</time>
-                                    <a href={activity.link} target="_blank"><h3 className="text-2xl font-bold text-orange">{activity.organization}</h3></a>
-                                    <h4 className="mb-1 text-lg font-medium text-paragraph-gray dark:text-paragraph-gray">{activity.position}</h4>
-                                    <div className="mb-4">
-                                        <span className="text-orange mr-2">▹</span>
-                                        <span className="text-base font-normal text-paragraph-gray dark:text-paragraph-gray">{activity.description}</span>
+                    <div className="text-left w-full max-w-screen-lg">
+                        <div className="text-left w-full">
+                            <SectionHeader title="my-involvement" />
+                        </div>
+                        <ol className="relative border-s border-paragraph-gray dark:border-paragraph-gray">
+                            {myExtracurriculars.map((activity, index) => (
+                                <li key={index} className="mb-10 ml-4 w-md">
+                                    <div className="absolute w-3 h-3 bg-paragraph-gray rounded mt-1.5 -start-1.5 border border-orange dark:orange dark:bg-orange"></div>
+                                    <div className="w-full xl:w-11/12">
+                                        <time className="mb-1 text-sm font-normal leading-none text-paragraph-gray dark:text-paragraph-gray">{activity.duration}</time>
+                                        <a href={activity.link} target="_blank"><h3 className="text-2xl font-bold text-orange">{activity.organization}</h3></a>
+                                        <h4 className="mb-1 text-lg font-medium text-paragraph-gray dark:text-paragraph-gray">{activity.position}</h4>
+                                        <div className="mb-4">
+                                            <span className="text-orange mr-2">▹</span>
+                                            <span className="text-base font-normal text-paragraph-gray dark:text-paragraph-gray">{activity.description}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        ))}
-                    </ol>
+                                </li>
+                            ))}
+                        </ol>
+                    </div>
                 </FadeInSection>
             </div>
         </>

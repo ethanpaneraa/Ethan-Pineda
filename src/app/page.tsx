@@ -1,3 +1,4 @@
+import NavBar from "./ui/NavBar";
 import Introduction from "./_components/_introduction/Introduction";
 import About from "./_components/About/About";
 import ProfessionalExperience from "./_components/ProfessionalExperience/ProfessionalExperience";
@@ -9,6 +10,7 @@ import Contact from "./_components/Contact/Contact";
 export default function Home() {
   return (
     <main >
+      <NavBar /> 
       <Introduction />
       <About /> 
       <ProfessionalExperience />
