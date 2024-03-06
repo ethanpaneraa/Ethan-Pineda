@@ -62,7 +62,7 @@ export default function OtherProjects() {
 
     return (
         <>
-        <div className="min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mt-10">
+        <div className="min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mt-10 mb-10">
             <FadeInSection delay={100}>
                 <div className="text-left w-full">
                     <SectionHeader title="other-projects"/>
