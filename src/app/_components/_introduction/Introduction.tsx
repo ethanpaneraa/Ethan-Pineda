@@ -13,7 +13,7 @@ const DynamicCubeSketch = dynamic(() => import('../Cube/Cube'), {
 export default function Introduction() {
     return (
         <>
-            <div className="flex flex-col sm:flex-row items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
+            <div id="home" className="flex flex-col sm:flex-row items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
                 <div className="flex flex-col sm:flex-row-reverse items-center justify-center w-full space-x-0 sm:space-x-4">
                     <div className="mb-10">
                         <DynamicCubeSketch />

@@ -44,7 +44,7 @@ export default function NavBar() {
     
 
     const links: Array<Link> = [
-        { name: "<home>", url: "/" },
+        { name: "<home>", url: "#home" },
         { name: "<about>", url: "#about" },
         { name: "<expeience>", url: "#experience" },
         { name: "<organizations>", url: "#organizations"}, 
