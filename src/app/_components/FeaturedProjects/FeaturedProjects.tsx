@@ -52,7 +52,7 @@ export default function FeaturedProjects() {
     
     return (
       <>
-        <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10">
+        <div className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10 md:py-36">
           <FadeInSection delay={100}>
             <div className="text-left w-full">
               <SectionHeader title="things-i-built"/>
@@ -76,13 +76,13 @@ export default function FeaturedProjects() {
                           {project.github && (
                             <a href={project.github} className="text-orange inline-flex items-center md:mb-2 lg:mb-0">
                               GitHub
-                              <GitHubIcon className="ml-2" />
+                              <GitHubIcon className="ml-2 w-5 h-5" />
                             </a>
                           )}
                           {project.external && (
                             <a href={project.external} className="ml-4 text-orange inline-flex items-center">
                               Visit
-                              <OpenInBrowserIcon className="ml-2" />
+                              <OpenInBrowserIcon className="ml-2 h-6 w-6" />
                             </a>
                           )}
                         </div>

@@ -9,12 +9,12 @@ export default function Contact() {
 
     return (
         <>
-            <div className="flex flex-col  text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10">
+            <div className="flex flex-col  text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10 md:py-36">
                 <div className="text-left w-full">
                     <SectionHeader title="get-in-touch" />
                 </div>
                 <div className="max-w-screen-sm">
-                    <p className="text-left text-paragraph-gray mb-10">I&apos;m currently not looking for any new professional opportunities for the summer of 2024, but will I will be interested in any opportunities for Spring 2024, Fall 2024, Winter 2025, and spring 2025 internships. Feel free to ask me anything or just say hi!</p>
+                    <p className="text-left text-paragraph-gray mb-10">I&apos;m currently not looking for any new professional opportunities for the summer of 2024, but I am interested in any opportunities for Spring 2024, Fall 2024, Winter 2025, and spring 2025 internships. Feel free to ask me anything or just say hi!</p>
                     <div className="flex items-center justify-start gap-4 mt-5">
                         <a
                             href="mailto:ethanpineda2025@u.northwestern.edu

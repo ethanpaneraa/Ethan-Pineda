@@ -60,7 +60,7 @@ export default function ProfessionalExperience() {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mb-10">
+            <div className="flex flex-col items-center justify-center min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mt-10 mx-auto mb-10 md:py-36">
                 <FadeInSection delay={100}>
                     <div className="text-left w-full">
                         <SectionHeader title="where-i-work" />

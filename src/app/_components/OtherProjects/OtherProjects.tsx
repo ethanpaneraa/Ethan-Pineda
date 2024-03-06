@@ -24,14 +24,14 @@ export default function OtherProjects() {
             description: "A simple web app that allows users to make posts and comments, and share their opinions on music. Final project for CodePath Web 102 course.",
         }, 
         {
-            title: "Emerging Coders Website Documentation",
+            title: "EMCO Website Documentation",
             tech: ["Next.js (React)", "Tailwind CSS", "MDX"],
             github: "https://github.com/Emerging-Coders-Repositories/emerging-coders-website-documentation",
             external: "https://emerging-coders-website-documentation-fxxzuu0t6-ethanpaneraa.vercel.app/", 
             description: "Documentation for the Emerging Coders Website. ",
         },
         {
-            title: "Ruta Health Landing Page",
+            title: "Ruta Health",
             tech: ["React", "HTML/CSS"], 
             github: "https://github.com/ethanpaneraa/Ruta-Health",
             external: "https://ethanpaneraa.github.io/Ruta-Health/", 
@@ -62,44 +62,48 @@ export default function OtherProjects() {
 
     return (
         <>
-        <div className="min-h-screen text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mt-10 mb-10">
+        <div className="text-paragraph-gray px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto mt-10 mb-10 md:py-36">
             <FadeInSection delay={100}>
                 <div className="text-left w-full">
                     <SectionHeader title="other-projects"/>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg gap-4">
-                    {myOtherProjects.map((project, index) => (
-                        <div key={index} className="flex flex-col bg-card-background rounded-lg shadow-md overflow-hidden transform transition-all hover:-translate-y-2 duration-300 p-6">
-                            <div className="flex items-center justify-end">
-                                <div className="flex items-center gap-2">
-                                    {project.github && 
-                                        <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-paragraph-gray"
-                                        >   
-                                        <GitHubIcon className="h-6 w-6 text-paragraph-gray" />
-                                        </a>}{project.external && 
-                                            <a
-                                            href={project.external}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-paragraph-gray"
-                                            >
-                                            <OpenInBrowserIcon className="h-6 w-6 text-paragraph-gray" />
-                                            </a>}
-                                </div>
-                            </div>
-                            <h3 className="mt-4 text-xl font-bold text-orange">{project.title}</h3>
-                            <p className="mt-2 text-base text-paragraph-gray">{project.description}</p>
-                            <ul className="mt-4">
-                                {project.tech.map((technology, techIndex) => (
-                                    <li key={techIndex} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{technology}</li>
-                                ))}
-                            </ul>
+                {myOtherProjects.map((project, index) => (
+                <div key={index} className="flex flex-col bg-card-background rounded-lg shadow-md overflow-hidden transform transition-all hover:-translate-y-2 duration-300 p-6">
+                    <div className="flex justify-between items-start mb-4">
+                        <h3 className="text-xl font-bold text-orange">{project.title}</h3>
+                        <div className="flex items-center gap-2">
+                            {project.github && (
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-paragraph-gray"
+                                >
+                                    <GitHubIcon className="h-6 w-6 text-paragraph-gray" />
+                                </a>
+                            )}
+                            {project.external && (
+                                <a
+                                    href={project.external}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-paragraph-gray"
+                                >
+                                    <OpenInBrowserIcon className="h-6 w-6 text-paragraph-gray" />
+                                </a>
+                            )}
                         </div>
-                    ))}
+                    </div>
+                    <p className="mt-2 text-base text-paragraph-gray">{project.description}</p>
+                    <ul className="mt-4">
+                        {project.tech.map((technology, techIndex) => (
+                            <li key={techIndex} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{technology}</li>
+                ))}
+             </ul>
+        </div>
+        ))}
+
                 </div>
             </FadeInSection>
         </div>
