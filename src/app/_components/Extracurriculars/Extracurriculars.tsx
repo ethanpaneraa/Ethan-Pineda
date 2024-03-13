@@ -7,8 +7,9 @@ interface ExtracurricularObject {
     organization: string;
     position: string;
     duration: string;
+    location: string; 
     link: string; 
-    description: string; // Changed from Array<string> to string
+    description: string;
 };
 
 export default function Extracurriculars() {
@@ -18,13 +19,15 @@ export default function Extracurriculars() {
             organization: "Emerging Coders", 
             position: "Webmaster",
             duration: "September 2022 - Present", 
+            location: "Evanston, IL",
             link: "https://emerging-coders-website.vercel.app/", 
             description: "As the Webmaster, I developed and maintained our organization's website with Next.js and Tailwind CSS, led technical workshops, mentored over 50 students, and collaborated on events with sponsors.",
         },
         {
             organization: "The Society of Hispanic Professional Engineers (SHPE)",
             position: "MentorSHPE Chair", 
-            duration: "March 2022 - Present", 
+            duration: "March 2022 - March 2024", 
+            location: "Evanston, IL",
             link: "https://www.instagram.com/shpe_nu/", 
             description: "Directed the mentorship program for 75 Latine/Latinx engineering majors, boosting participation by 30% and organizing senior panels to enhance career readiness.",
         },
@@ -32,6 +35,7 @@ export default function Extracurriculars() {
             organization: "ColorStack at Northwestern", 
             position: "Founder and Treasurer",
             duration: "May 2023 - Present",
+            location: "Evanston, IL",
             link: "https://www.instagram.com/colorstacknu/", 
             description: "As Founder and Treasurer, I've helped to secure over $3,000 in funding and managed finances with a focus on corporate sponsorships to support our initiatives, visions, and goals.",
         },
@@ -39,10 +43,11 @@ export default function Extracurriculars() {
             organization: "Alianza - The Latinx Student Alliance",
             position: "Historian", 
             duration: "March 2022 - March 2023", 
+            location: "Evanston, IL",
             link: "https://www.instagram.com/nu_alianza/",
             description: "Recorded and maintained historical accounts of Alianza's events and Latinx history at Northwestern, involving extensive documentation and social media engagement.",
         },
-    ];
+    ];''
     
     return (
         <>
@@ -52,17 +57,25 @@ export default function Extracurriculars() {
                         <div className="text-left w-full">
                             <SectionHeader title="my-involvement" />
                         </div>
-                        <ol className="relative border-s border-paragraph-gray dark:border-paragraph-gray">
-                            {myExtracurriculars.map((activity, index) => (
-                                <li key={index} className="mb-10 ml-4 w-md">
-                                    <div className="absolute w-3 h-3 bg-paragraph-gray rounded mt-1.5 -start-1.5 border border-orange dark:orange dark:bg-orange"></div>
-                                    <div className="w-full xl:w-11/12">
-                                        <time className="mb-1 text-sm font-normal leading-none text-paragraph-gray dark:text-paragraph-gray">{activity.duration}</time>
-                                        <a href={activity.link} target="_blank"><h3 className="text-2xl font-bold text-orange">{activity.organization}</h3></a>
-                                        <h4 className="mb-1 text-lg font-medium text-paragraph-gray dark:text-paragraph-gray">{activity.position}</h4>
-                                        <div className="mb-4">
-                                            <span className="text-orange mr-2">▹</span>
-                                            <span className="text-base font-normal text-paragraph-gray dark:text-paragraph-gray">{activity.description}</span>
+                        <ol className="mx-auto">
+                            {myExtracurriculars.map((org, index) => (
+                                <li key={index} className="mb-10 flex">
+                                    {/* <time className="flex-shrink-0 w-1/3 md:w-1/4 text-left md:text-right text-md font-normal text-gray-500 pr-4">{experience.duration}</time> */}
+                                    <div className="flex-shrink-0  flex-col w-1/3 md:w-1/4 text-left md:text-right text-md font-normal text-paragraph-gray pr-4">
+                                        {/* <div className="w-3 h-3 bg-gray-500 rounded-full -left-1.5 top-1.5 border border-gray-300"></div> */}
+                                        <div className="flex flex-col text-sm">
+                                            <time className="text-left md:text-right mb-2">{org.duration}</time>
+                                            <span>{org.location}</span>
+                                        </div>
+                                    </div>
+                                    <div className="relative flex-grow border-l border-bg-gray pl-4">
+                                        <div className="absolute w-3 h-3 bg-orange rounded -left-1.5 top-1.5 border border-orange"></div>
+                                        <div className="pl-4">
+                                            <a href={org.link} target="_blank" rel="noopener noreferrer">
+                                                <h3 className="text-xl font-bold text-orange">{org.organization}</h3>
+                                            </a>
+                                            <h4 className="mb-1 text-lg font-medium text-paragraph-gray">{org.position}</h4>
+                                            <p className="text-base font-normal text-paragraph-gray">{org.description}</p>
                                         </div>
                                     </div>
                                 </li>

@@ -57,7 +57,7 @@ export default function NavBar() {
             <nav className="bg-navbar-color px-2 sm:px-4 py-2.5 top-0 sticky z-50">
                 <div className="max-w-screen-2xl flex flex-wrap justify-between items-center mx-auto">
                     <a href="/" className="flex gap-5">
-                        <img src="/Logo.png" alt="Ethan Pineda" className="w-12 h-12" />
+                        {/* <img src="/Logo.png" alt="Ethan Pineda" className="w-12 h-12" /> */}
                         <span className="self-center text-lg font-semibold whitespace-nowrap text-paragraph-gray">Ethan Pineda</span>
                     </a>
                     <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-paragraph-gray rounded-lg md:hidden dark:text-paragraph-gray" aria-expanded={isExpanded} onClick={handleToggle}>
