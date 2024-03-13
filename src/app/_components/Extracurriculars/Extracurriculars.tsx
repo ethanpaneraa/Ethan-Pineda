@@ -47,7 +47,7 @@ export default function Extracurriculars() {
             link: "https://www.instagram.com/nu_alianza/",
             description: "Recorded and maintained historical accounts of Alianza's events and Latinx history at Northwestern, involving extensive documentation and social media engagement.",
         },
-    ];''
+    ];
     
     return (
         <>
