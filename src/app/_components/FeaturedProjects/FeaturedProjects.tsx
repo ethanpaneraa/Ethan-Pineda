@@ -70,7 +70,7 @@ export default function FeaturedProjects() {
                           <p className="mb-2">{project.description}</p>
                           <div className="flex-wrap mb-4">
                             {project.tech.map((tech, i) => (
-                              <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tech}</span>
+                              <span key={i} className="inline-block border border-gray-700  rounded-full px-3 py-1 text-xs font-semibold text-paragraph-gray mr-2 mb-2">{tech}</span>
                             ))}
                           </div>
                           <div className="flex justify-center sm:justify-start items-center">

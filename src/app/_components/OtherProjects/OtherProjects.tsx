@@ -99,7 +99,7 @@ export default function OtherProjects() {
                         <p className="mt-2 text-base text-paragraph-gray">{project.description}</p>
                         <ul className="mt-4">
                             {project.tech.map((technology, techIndex) => (
-                                <li key={techIndex} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{technology}</li>
+                                <li key={techIndex} className="inline-block border border-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-paragraph-gray mr-2 mb-2">{technology}</li>
                                 ))}
                         </ul>
                     </div>
