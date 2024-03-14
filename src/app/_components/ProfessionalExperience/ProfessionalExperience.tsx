@@ -69,7 +69,7 @@ export default function ProfessionalExperience() {
         <>
             <div id="experience" className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 mx-auto text-gray-600 mb-10 md:py-36">
                 <FadeInSection delay={100}>
-                    <div className="text-left text-paragraph-gray w-full max-w-screen-lg">
+                    <div className="text-left text-paragraph-gray w-full max-w-screen-md">
                         <SectionHeader title="where-i-work" />
                         <ol className="mx-auto">
                             {myProfessionalExperience.map((experience, index) => (
@@ -82,8 +82,8 @@ export default function ProfessionalExperience() {
                                             <span>{experience.location}</span>
                                         </div>
                                     </div>
-                                    <div className="relative flex-grow border-l border-bg-gray pl-4">
-                                        <div className="absolute w-3 h-3 bg-orange rounded -left-1.5 top-1.5 border border-orange"></div>
+                                    <div className="relative flex-grow border-l border-dashed border-bg-gray pl-4">
+                                        {/* <div className="absolute w-3 h-3 bg-orange rounded -left-1.5 top-1.5 border border-orange"></div> */}
                                         <div className="pl-4">
                                             <a href={experience.link} target="_blank" rel="noopener noreferrer">
                                                 <h3 className="text-xl font-bold text-orange">{experience.company}</h3>

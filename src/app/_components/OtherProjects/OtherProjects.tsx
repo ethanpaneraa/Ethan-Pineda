@@ -64,11 +64,11 @@ export default function OtherProjects() {
         <>
         <div className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mt-10 mb-10 md:py-36">
             <FadeInSection delay={100}>
-                <div className="text-left w-full max-w-screen-lg">
+                <div className="text-left w-full max-w-screen-md">
                     <div className="text-left w-full">
                         <SectionHeader title="other-projects"/>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
                     {myOtherProjects.map((project, index) => (
                     <div key={index} className="flex flex-col bg-card-background rounded-lg shadow-md overflow-hidden transform transition-all hover:-translate-y-2 duration-300 p-6">
                         <div className="flex justify-between items-start mb-4">

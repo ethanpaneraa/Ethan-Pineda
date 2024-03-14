@@ -53,7 +53,7 @@ export default function Extracurriculars() {
         <>
             <div id="organizations" className="flex flex-col items-center justify-center  text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
                 <FadeInSection delay={100}>
-                    <div className="text-left w-full max-w-screen-lg">
+                    <div className="text-left w-full max-w-screen-md">
                         <div className="text-left w-full">
                             <SectionHeader title="my-involvement" />
                         </div>
@@ -68,8 +68,8 @@ export default function Extracurriculars() {
                                             <span>{org.location}</span>
                                         </div>
                                     </div>
-                                    <div className="relative flex-grow border-l border-bg-gray pl-4">
-                                        <div className="absolute w-3 h-3 bg-orange rounded -left-1.5 top-1.5 border border-orange"></div>
+                                    <div className="relative flex-grow border-l border-dashed border-bg-gray pl-4">
+                                        {/* <div className="absolute w-3 h-3 bg-orange rounded -left-1.5 top-1.5 border border-orange"></div> */}
                                         <div className="pl-4">
                                             <a href={org.link} target="_blank" rel="noopener noreferrer">
                                                 <h3 className="text-xl font-bold text-orange">{org.organization}</h3>

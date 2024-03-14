@@ -54,7 +54,7 @@ export default function FeaturedProjects() {
       <>
         <div id="projects" className="flex flex-col items-center justify-center text-paragraph-gray px-4 sm:px-6 lg:px-8 mx-auto mb-10 md:py-36">
           <FadeInSection delay={100}>
-            <div className="text-left w-full max-w-screen-lg">
+            <div className="text-left w-full max-w-screen-md">
               <div className="text-left w-full">
                 <SectionHeader title="things-i-built"/>
               </div>
