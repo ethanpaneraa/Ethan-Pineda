@@ -16,12 +16,20 @@ export default function Extracurriculars() {
 
     const myExtracurriculars: Array<ExtracurricularObject> = [
         {
+            organization: "Develop and Innovate for Social Change (DISC)",
+            position: "Technical Lead", 
+            duration: "March 2024 - Present", 
+            location: "Evanston, IL", 
+            link: "https://www.instagram.com/disc_nu/",
+            description: "Organize Fall Workshops and Studios during Winter and Spring, bringing specialized knowledge in software development for guidance and mentorship of project teams.", 
+        },
+        {
             organization: "Emerging Coders", 
             position: "Webmaster",
             duration: "September 2022 - Present", 
             location: "Evanston, IL",
             link: "https://emerging-coders-website.vercel.app/", 
-            description: "As the Webmaster, I developed and maintained our organization's website with Next.js and Tailwind CSS, led technical workshops, mentored over 50 students, and collaborated on events with sponsors.",
+            description: "Developed and maintained our organization's website with Next.js and Tailwind CSS, led technical workshops, mentored over 50 students, and collaborated on events with sponsors.",
         },
         {
             organization: "The Society of Hispanic Professional Engineers (SHPE)",
