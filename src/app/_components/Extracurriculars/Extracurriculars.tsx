@@ -16,6 +16,22 @@ export default function Extracurriculars() {
 
     const myExtracurriculars: Array<ExtracurricularObject> = [
         {
+            organization: "Mayfest Productions", 
+            position: "Technical & Engineering Director",
+            duration: "June 2024 - Present", 
+            location: "Evanston, IL",
+            link: 'https://www.dilloday.com/', 
+            description: "Mayfest Productions is a student-run organization that plans and executes Dillo Day, the largest student-run music festival in the nation at Northwestern University."
+        },
+        {
+            organization: "Emerging Coders",
+            position: "Vice President",
+            duration: "May 2024 - Present",
+            location: "Evanston, IL",
+            link: "https://emerging-coders-website.vercel.app/",
+            description: "Emerging Coders is a student organization that aims to provide a supportive community for students interested in computer science and technology."
+        },
+        {
             organization: "Develop and Innovate for Social Change (DISC)",
             position: "Technical Lead", 
             duration: "March 2024 - Present", 
