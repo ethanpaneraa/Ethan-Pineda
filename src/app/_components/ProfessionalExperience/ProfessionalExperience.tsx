@@ -15,13 +15,13 @@ interface ProfessionalExperienceObject {
 export default function ProfessionalExperience() {
   const myProfessionalExperience: Array<ProfessionalExperienceObject> = [
     {
-      company: "Salesforce", 
+      company: "Salesforce",
       duration: "June 2024 - September 2024",
-      location: "San Francisco, CA", 
-      title: "Software Engineer Intern", 
+      location: "San Francisco, CA",
+      title: "Software Engineer Intern",
       link: "https://www.salesforce.com/products/data/",
-      description: "Data Cloud Intern"
-    }, 
+      description: "Data Cloud Intern",
+    },
     {
       company: "Salesforce",
       duration: "June - August 2023",
