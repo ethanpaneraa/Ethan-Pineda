@@ -1,4 +1,4 @@
-import { Point, Size } from "@/_types/hero";
+import { Point, Size } from "@/types/hero";
 
 export const map = (
   v: number,

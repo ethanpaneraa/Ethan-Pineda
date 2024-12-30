@@ -9,7 +9,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nexxel.dev"),
+  metadataBase: new URL("https://ethan-pineda.vercel.app"),
   title: {
     default: "Ethan Pineda",
     template: "%s | Ethan Pineda",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ethan Pineda",
     description: "Software Engineer, BA/MS @ Northwestern University.",
-    url: "https://www.nexxel.dev",
+    url: "https://ethan-pineda.vercel.app",
     siteName: "Ethan Pineda",
     locale: "en_US",
     type: "website",

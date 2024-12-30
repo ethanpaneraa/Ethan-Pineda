@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Dimensions } from "@/_types/hero";
+import { Dimensions } from "@/types/hero";
 
 export const useWindowDimensions = (): Dimensions => {
   const [dimensions, setDimensions] = useState<Dimensions>({

@@ -1,9 +1,11 @@
-import ASCIIBackground from "@/_components/hero";
+import Hero from "@/components/hero";
 
 export default function Home() {
   return (
     <>
-      <ASCIIBackground />
+      <div className="min-h-screen overflow-x-hidden">
+        <Hero />
+      </div>
     </>
   );
 }

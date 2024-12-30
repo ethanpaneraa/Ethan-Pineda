@@ -1,14 +1,21 @@
-export const ProfileInfo = () => {
+import { ScrambleText } from "@/components/scramble-text";
+import { MapPin, Building2 } from "lucide-react";
+
+export default function ShortBio() {
   return (
-    <div className="bg-black/80 border border-white p-8 max-w-2xl mx-auto">
-      <h1 className="text-3xl mb-4 text-white">Ethan Pineda</h1>
+    <div className="bg-neutral-900 border border-white p-8 max-w-2xl">
+      <h1 className="text-4xl font-bold mb-4 text-white animate-fade-in">
+        <ScrambleText text="ethan pineda" />
+      </h1>
       <div className="flex items-center gap-2 text-md text-white mb-4">
-        Evanston, Illinois
+        <MapPin className="h-4 w-4" />
+        <ScrambleText text="evanston, illinois" />
       </div>
       <div className="flex items-center gap-2 text-md text-white mb-4">
-        Incoming Software Engineer @ Salesforce
+        <Building2 className="h-4 w-4" />
+        <ScrambleText text="incoming software engineer @ salesforce" />
       </div>
-      <p className="text-md text-white leading-relaxed">
+      <p className="text-sm text-white leading-relaxed">
         hey there, i&apos;m a current undergraduate senior at northwestern
         university, concurrently pursuing a bachelors and masters degree in
         computer science with a minor in latino and latina studies. i will
@@ -24,4 +31,4 @@ export const ProfileInfo = () => {
       </p>
     </div>
   );
-};
+}

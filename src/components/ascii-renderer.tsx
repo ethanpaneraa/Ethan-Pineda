@@ -1,4 +1,4 @@
-import { Point, Size } from "@/_types/hero";
+import { Point } from "@/types/hero";
 import { map, sdBox, opSmoothUnion, transform } from "@/lib/math";
 
 export class ASCIIRenderer {

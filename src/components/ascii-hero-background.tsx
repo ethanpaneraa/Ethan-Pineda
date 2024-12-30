@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { useWindowDimensions } from "@/_hooks/useWindowDimensions";
-import { ASCIIRenderer } from "@/_components/ascii-renderer";
-import { ProfileInfo } from "@/_components/short-bio";
+import { useWindowDimensions } from "@/hooks/useWindowDimensions";
+import { ASCIIRenderer } from "@/components/ascii-renderer";
 
 export default function ASCIIBackground() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -31,17 +30,10 @@ export default function ASCIIBackground() {
   }, [dimensions]);
 
   return (
-    <div className="relative w-full h-screen">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
-      <div className="relative z-10 flex items-center justify-center min-h-screen">
-        <ProfileInfo />
-      </div>
-      <canvas
-        ref={canvasRef}
-        width={dimensions.width}
-        height={dimensions.height}
-        className="absolute top-0 left-0 w-full h-full"
-      />
-    </div>
+    <canvas
+      ref={canvasRef}
+      width={dimensions.width}
+      height={dimensions.height}
+    />
   );
 }
