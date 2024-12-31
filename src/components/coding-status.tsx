@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Square } from "lucide-react"; // Changed from Circle to Square
+import { Square } from "lucide-react";
 
 interface CodingStatus {
   isActive: boolean;
@@ -9,7 +9,7 @@ interface CodingStatus {
   currentProject: string | null;
   debug?: {
     heartbeatsCount: number;
-    lastHeartbeatRaw: any;
+    lastHeartbeatRaw: string | number | Date | null;
   };
 }
 
