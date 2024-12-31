@@ -11,7 +11,7 @@ export type Route = (typeof ROUTES)[keyof typeof ROUTES];
 
 export const KEYBOARD_SHORTCUTS: Record<Route, string> = {
   [ROUTES.ABOUT]: "a",
-  [ROUTES.EXPERINECE]: "e",
+  [ROUTES.EXPERINECE]: "w",
   [ROUTES.HOME]: "h",
   [ROUTES.BLOG]: "b",
   [ROUTES.PROJECTS]: "p",

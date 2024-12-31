@@ -33,7 +33,7 @@ export function NavigationBar({
         <NavigationLink
           href={ROUTES.EXPERINECE}
           shortcut={KEYBOARD_SHORTCUTS[ROUTES.EXPERINECE]}
-          label="experience"
+          label="work"
           className={linkClassName}
         />
         <NavigationLink

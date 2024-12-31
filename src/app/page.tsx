@@ -13,7 +13,7 @@ export default function Home() {
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <CardLayout>
               <ShortBio />
-              <div className="py-2 mt-4 flex justify-center">
+              <div className="py-2 mt-4 flex justify-center text-sm">
                 <HomePageNavigationBar />
               </div>
             </CardLayout>
