@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/nav-bar";
-
+import { Footer } from "@/components/ui/footer";
 export default function MainLayout({
   children,
 }: Readonly<{
@@ -10,6 +10,7 @@ export default function MainLayout({
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Navbar />
         {children}
+        <Footer />
       </div>
     </>
   );
