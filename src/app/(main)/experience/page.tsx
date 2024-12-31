@@ -9,7 +9,7 @@ export default function ExperiencePage() {
         <h1 className="text-4xl font-bold text-white animate-fade-in">
           <span className="inline-block">
             <span className="text-textAccent mr-2">*</span>
-            <ScrambleText text="experience" />
+            <ScrambleText text="work" />
           </span>
         </h1>
         <p className="text-gray-300 leading-relaxed animate-fade-in-up">
