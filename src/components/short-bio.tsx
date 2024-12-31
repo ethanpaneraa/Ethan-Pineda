@@ -19,8 +19,8 @@ export default function ShortBio() {
         hey there, i&apos;m a current undergraduate senior at northwestern
         university, concurrently pursuing a bachelors and masters degree in
         computer science with a minor in latino and latina studies. after
-        graduation, working as a software engineer at salesforce in san
-        francisco starting in september twenty-twenty-five. i will be
+        graduation, i will be working as a software engineer at salesforce in
+        san francisco starting in september twenty-twenty-five. i will be
         contributing to the data cloud platform.
         <br />
         <br />

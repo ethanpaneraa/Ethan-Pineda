@@ -4,7 +4,7 @@ import { ScrambleText } from "@/components/scramble-text";
 
 export default function ToolsPage() {
   return (
-    <div className="">
+    <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold text-white mb-4 animate-fade-in">
         <span className="inline-block">
           <span className="text-textAccent mr-2">*</span>
