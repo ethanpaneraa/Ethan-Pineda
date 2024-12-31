@@ -3,6 +3,7 @@ import { ScrambleText } from "@/components/scramble-text";
 import { projectItems } from "@/lib/data/projects";
 import { ProjectCard } from "@/components/projects/project-card";
 import type { ProjectCategory } from "@/lib/data/projects";
+import { Metadata } from "next";
 import { useState } from "react";
 
 export default function ProjectsPage() {
@@ -95,3 +96,15 @@ export default function ProjectsPage() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "projects",
+  description: "",
+  openGraph: {
+    images: [
+      {
+        url: "https://ethan-pineda.vercel.app/og/home?title=projects",
+      },
+    ],
+  },
+};

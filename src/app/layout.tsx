@@ -13,15 +13,17 @@ export const metadata: Metadata = {
     default: "ethan pineda",
     template: "%s | ethan pineda",
   },
-  description: "Software Engineer, BA/MS @ Northwestern University.",
+  description:
+    "software engineer. ba/ms computer science from northwestern university",
   openGraph: {
     title: "ethan pineda",
-    description: "Software Engineer, BA/MS @ Northwestern University.",
+    description:
+      "software engineer. ba/ms computer science from northwestern university",
     url: "https://ethan-pineda.vercel.app",
     siteName: "ethan pineda",
     locale: "en_US",
     type: "website",
-    images: ["https://ethan-pineda.vercel.app"],
+    images: ["https://ethan-pineda.vercel.app/og/home"],
   },
   robots: {
     index: true,

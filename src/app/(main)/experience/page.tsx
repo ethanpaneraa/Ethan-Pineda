@@ -1,6 +1,7 @@
 import { ScrambleText } from "@/components/scramble-text";
 import { ExperienceSection } from "@/components/experience/experience-section";
 import { workExperience, involvementExperience } from "@/lib/data/experience";
+import { Metadata } from "next";
 
 export default function ExperiencePage() {
   return (
@@ -32,3 +33,15 @@ export default function ExperiencePage() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "tools",
+  description: "",
+  openGraph: {
+    images: [
+      {
+        url: "https://ethan-pineda.vercel.app/og/home?title=work",
+      },
+    ],
+  },
+};

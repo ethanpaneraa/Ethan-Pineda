@@ -1,6 +1,7 @@
 import { ToolCard } from "@/components/tools/tool-card";
 import { Laptop, Terminal, Monitor } from "lucide-react";
 import { ScrambleText } from "@/components/scramble-text";
+import { Metadata } from "next";
 
 export default function ToolsPage() {
   return (
@@ -116,3 +117,15 @@ export default function ToolsPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "tools",
+  description: "",
+  openGraph: {
+    images: [
+      {
+        url: "https://ethan-pineda.vercel.app/og/home?title=tools",
+      },
+    ],
+  },
+};

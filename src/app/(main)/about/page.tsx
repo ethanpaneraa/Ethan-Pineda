@@ -4,6 +4,7 @@ import { SocialLinks } from "@/components/about/social-links";
 import { CodingStatus } from "@/components/coding-status";
 import WakaTimeStats from "@/components/stats";
 import SpotifyStats from "@/components/spotify-stats";
+import { Metadata } from "next";
 
 export default function AboutPage() {
   return (
@@ -27,3 +28,15 @@ export default function AboutPage() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "about",
+  description: "",
+  openGraph: {
+    images: [
+      {
+        url: "https://ethan-pineda.vercel.app/og/home?title=projects",
+      },
+    ],
+  },
+};
