@@ -39,9 +39,9 @@ export default function ProjectsPage() {
           </span>
         </h1>
         <p className="text-gray-300 leading-relaxed animate-fade-in-up">
-          here's a collection of projects i've worked on, ranging from web
-          applications and games to machine learning experiments. each project
-          represents a unique challenge and learning experience.
+          here&apos;s a collection of projects i&apos;ve worked on, ranging from
+          web applications and games to machine learning experiments. each
+          project represents a unique challenge and learning experience.
         </p>
       </div>
 

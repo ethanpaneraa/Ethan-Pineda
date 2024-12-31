@@ -13,9 +13,9 @@ export default function ExperiencePage() {
           </span>
         </h1>
         <p className="text-gray-300 leading-relaxed animate-fade-in-up">
-          here's a comprehensive look at my professional experience and campus
-          involvement. i've had the opportunity to work with amazing teams and
-          contribute to meaningful projects.
+          here&apos;s a comprehensive look at my professional experience and
+          campus involvement. i&apos;ve had the opportunity to work with amazing
+          teams and contribute to meaningful projects.
         </p>
       </div>
 

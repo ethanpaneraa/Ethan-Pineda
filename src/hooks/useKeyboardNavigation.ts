@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { KEYBOARD_SHORTCUTS, ROUTES } from "@/lib/constants/routes";
+import { KEYBOARD_SHORTCUTS } from "@/lib/constants/routes";
 
 export function useKeyboardNavigation() {
   const router = useRouter();
@@ -19,6 +19,7 @@ export function useKeyboardNavigation() {
 
       const key = event.key.toLowerCase();
       const routes = Object.entries(KEYBOARD_SHORTCUTS);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const matchedRoute = routes.find(([_, shortcut]) => shortcut === key);
 
       if (matchedRoute) {
