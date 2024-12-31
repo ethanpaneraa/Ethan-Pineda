@@ -5,13 +5,15 @@ import { SocialLinks } from "@/components/about/social-links";
 export default function AboutPage() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-16">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
         <div className="flex-1">
           <AboutContent />
         </div>
         <div className="flex flex-col gap-8 w-full lg:w-auto">
           <ProfileImage />
-          <SocialLinks />
+          <div className="px-4 lg:px-0">
+            <SocialLinks />
+          </div>
         </div>
       </div>
     </>

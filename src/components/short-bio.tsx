@@ -4,18 +4,18 @@ import { MapPin, Building2 } from "lucide-react";
 export default function ShortBio() {
   return (
     <div>
-      <h1 className="text-4xl font-bold mb-4 text-white animate-fade-in">
+      <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white animate-fade-in">
         <ScrambleText text="ethan pineda" />
       </h1>
       <div className="flex items-center gap-2 mb-4">
-        <MapPin className="h-4 w-4" />
+        <MapPin className="h-3 w-3 md:h-4 md:w-4" />
         <ScrambleText text="evanston, illinois" />
       </div>
       <div className="flex items-center gap-2 mb-4">
-        <Building2 className="h-4 w-4" />
+        <Building2 className="h-3 w-3 md:h-4 md:w-4" />
         <ScrambleText text="incoming software engineer @ salesforce" />
       </div>
-      <p className="leading-relaxed">
+      <p className="text-sm md:text-base leading-relaxed">
         hey there, i&apos;m a current undergraduate senior at northwestern
         university, concurrently pursuing a bachelors and masters degree in
         computer science with a minor in latino and latina studies. i will

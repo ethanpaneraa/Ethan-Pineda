@@ -30,13 +30,13 @@ const socialLinks: SocialLink[] = [
 
 export function Footer() {
   return (
-    <section className="animate-fade-in-up max-w-5xl mx-auto py-12 px-4">
-      <div className="border-t border-neutral-700 pt-12">
-        <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold flex items-center text-white">
+    <section className="animate-fade-in-up max-w-5xl mx-auto py-8 md:py-12 px-4">
+      <div className="border-t border-neutral-700 pt-8 md:pt-12">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 md:gap-0">
+          <h2 className="text-xl md:text-2xl font-bold flex items-center text-white">
             <span className="text-textAccent mr-2">*</span> links
           </h2>
-          <div className="flex flex-wrap gap-4 text-sm">
+          <nav className="flex flex-wrap gap-6 text-sm">
             {socialLinks.map((link, index) => (
               <Link
                 key={index}
@@ -46,7 +46,7 @@ export function Footer() {
                 {link.title}
               </Link>
             ))}
-          </div>
+          </nav>
         </div>
       </div>
     </section>
