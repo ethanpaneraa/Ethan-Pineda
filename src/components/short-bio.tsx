@@ -18,10 +18,10 @@ export default function ShortBio() {
       <p className="text-sm md:text-base leading-relaxed">
         hey there, i&apos;m a current undergraduate senior at northwestern
         university, concurrently pursuing a bachelors and masters degree in
-        computer science with a minor in latino and latina studies. i will
-        working as a software engineer at salesforce in san francisco starting
-        in september twenty-twenty-five. i will be contributing to the data
-        cloud platform.
+        computer science with a minor in latino and latina studies. after
+        graduation, working as a software engineer at salesforce in san
+        francisco starting in september twenty-twenty-five. i will be
+        contributing to the data cloud platform.
         <br />
         <br />
         my interest lie in distributed systems, embedded systems, and computer
