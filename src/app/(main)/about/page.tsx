@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://ethan-pineda.vercel.app/og/home?title=projects",
+        url: "https://ethan-pineda.vercel.app/og/home?title=about",
       },
     ],
   },
