@@ -11,15 +11,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ethan-pineda.vercel.app"),
   title: {
-    default: "Ethan Pineda",
-    template: "%s | Ethan Pineda",
+    default: "ethan pineda",
+    template: "%s | ethan pineda",
   },
   description: "Software Engineer, BA/MS @ Northwestern University.",
   openGraph: {
-    title: "Ethan Pineda",
+    title: "ethan pineda",
     description: "Software Engineer, BA/MS @ Northwestern University.",
     url: "https://ethan-pineda.vercel.app",
-    siteName: "Ethan Pineda",
+    siteName: "ethan pineda",
     locale: "en_US",
     type: "website",
     images: ["https://ethan-pineda.vercel.app"],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "max-snippet": -1,
   },
   twitter: {
-    title: "Ethan Pineda",
+    title: "ethan pineda",
     card: "summary_large_image",
     creator: "@ethanpaneraa",
   },
