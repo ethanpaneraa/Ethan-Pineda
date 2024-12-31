@@ -66,8 +66,9 @@ export default function WakapiStats() {
   return (
     <div className="border border-neutral-800 p-4 md:p-6">
       <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
+        <span className="text-textAccent mr-2">*</span>
         coding stats{" "}
-        <span className="text-gray-400 font-normal">(this week)</span>
+        <span className="text-gray-400 font-normal text-sm">(this week)</span>
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8">
