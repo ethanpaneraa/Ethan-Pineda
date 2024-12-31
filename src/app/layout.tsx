@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { Navbar } from "@/components/nav-bar";
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Ethan Pineda",
     locale: "en_US",
     type: "website",
-    images: ["https://www.nexxel.dev/og/home"],
+    images: ["https://ethan-pineda.vercel.app"],
   },
   robots: {
     index: true,
