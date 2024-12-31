@@ -61,6 +61,7 @@ export default function SpotifyStats() {
   if (error) return <div className="p-4 text-red-500">Error: {error}</div>;
   if (!data) return <div className="p-4">No data available</div>;
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { current, topTracks, topArtists } = data;
 
   return (
