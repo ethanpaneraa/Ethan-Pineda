@@ -31,37 +31,56 @@ export async function GET() {
   try {
     const access_token = await getAccessToken();
 
-    let response = await fetch(
-      "https://api.spotify.com/v1/me/player/currently-playing",
-      {
-        headers: {
-          Authorization: `Bearer ${access_token}`,
-        },
-        next: {
-          revalidate: 30,
-        },
-      }
-    );
-    if (response.status === 204 || !response.ok) {
-      response = await fetch(
+    const [currentResponse, topTracksResponse, topArtistsResponse] =
+      await Promise.all([
+        fetch("https://api.spotify.com/v1/me/player/currently-playing", {
+          headers: { Authorization: `Bearer ${access_token}` },
+          next: { revalidate: 30 },
+        }),
+        fetch(
+          "https://api.spotify.com/v1/me/top/tracks?limit=5&time_range=short_term",
+          {
+            headers: { Authorization: `Bearer ${access_token}` },
+            next: { revalidate: 3600 },
+          }
+        ),
+        fetch(
+          "https://api.spotify.com/v1/me/top/artists?limit=5&time_range=short_term",
+          {
+            headers: { Authorization: `Bearer ${access_token}` },
+            next: { revalidate: 3600 },
+          }
+        ),
+      ]);
+
+    let currentTrack = null;
+    if (currentResponse.status === 204 || !currentResponse.ok) {
+      const recentResponse = await fetch(
         "https://api.spotify.com/v1/me/player/recently-played?limit=1",
         {
-          headers: {
-            Authorization: `Bearer ${access_token}`,
-          },
-          next: {
-            revalidate: 30,
-          },
+          headers: { Authorization: `Bearer ${access_token}` },
+          next: { revalidate: 30 },
         }
       );
+      if (recentResponse.ok) {
+        const recentData = await recentResponse.json();
+        currentTrack = {
+          is_playing: false,
+          item: recentData.items[0]?.track,
+        };
+      }
+    } else {
+      currentTrack = await currentResponse.json();
     }
 
-    if (!response.ok) {
-      throw new Error(`Spotify API responded with ${response.status}`);
-    }
+    const topTracks = await topTracksResponse.json();
+    const topArtists = await topArtistsResponse.json();
 
-    const data = await response.json();
-    return NextResponse.json(data);
+    return NextResponse.json({
+      current: currentTrack,
+      topTracks: topTracks.items,
+      topArtists: topArtists.items,
+    });
   } catch (error) {
     console.error("Error in Spotify route:", error);
     return NextResponse.json(
