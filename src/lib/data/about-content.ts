@@ -56,14 +56,14 @@ export const projectItems: ExperienceItem[] = [
     href: "https://github.com/orgs/FTL-HomeHeart/repositories",
   },
   {
-    title: "Safety-Based Wearable Technology",
-    organization: "Ka moamoa Lab",
-    role: "Research Assistant",
-    period: "September 2023 - Present",
+    title: "Full-Stack Project Template",
+    organization: "Develop & Innovate for Social Change",
+    role: "Technical Lead",
+    period: "May 2024 - Present",
     location: "Evanston, IL",
     description:
-      "Collaborated on safety-based wearable technology using machine learning for threat detection.",
-    category: "research",
-    href: "https://kamoamoa.northwestern.edu",
+      "Developed a full-stack template for students to use in the DISCover program to build their client projects.",
+    category: "work",
+    href: "https://github.com/disc-template?tab=repositories",
   },
 ];
