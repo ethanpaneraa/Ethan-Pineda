@@ -1,6 +1,7 @@
 import AboutContent from "@/components/about/about-content";
 import { ProfileImage } from "@/components/about/project-image";
 import { SocialLinks } from "@/components/about/social-links";
+import { CodingStatus } from "@/components/coding-status";
 import WakaTimeStats from "@/components/stats";
 
 export default function AboutPage() {
@@ -14,6 +15,9 @@ export default function AboutPage() {
         <div className="flex flex-col gap-8 w-full lg:w-auto">
           <ProfileImage />
           <div className="px-4 lg:px-0">
+            <div className="py-8">
+              <CodingStatus />
+            </div>
             <SocialLinks />
           </div>
         </div>

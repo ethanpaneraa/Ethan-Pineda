@@ -1,6 +1,6 @@
 import { ScrambleText } from "@/components/scramble-text";
 import { MapPin, Building2 } from "lucide-react";
-
+import { CodingStatus } from "@/components/coding-status";
 export default function ShortBio() {
   return (
     <div>
@@ -14,6 +14,9 @@ export default function ShortBio() {
       <div className="flex items-center gap-2 mb-4">
         <Building2 className="h-3 w-3 md:h-4 md:w-4" />
         <ScrambleText text="incoming software engineer @ salesforce" />
+      </div>
+      <div className="flex items-center gap-2 mb-4">
+        <CodingStatus />
       </div>
       <p className="text-sm md:text-base leading-relaxed">
         hey there, i&apos;m a current undergraduate senior at northwestern

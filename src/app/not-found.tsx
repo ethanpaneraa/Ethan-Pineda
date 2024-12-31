@@ -31,7 +31,7 @@ export default function NotFound() {
           </pre>
         </div>
         <p className="text-gray-400 text-sm sm:text-base">
-          oops! seems like this page doesn't exist...
+          oops! seems like this page doesn&apos;t exist...
         </p>
         <Link
           href="/"
