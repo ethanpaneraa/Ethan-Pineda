@@ -3,6 +3,7 @@ import { ProfileImage } from "@/components/about/project-image";
 import { SocialLinks } from "@/components/about/social-links";
 import { CodingStatus } from "@/components/coding-status";
 import WakaTimeStats from "@/components/stats";
+import SpotifyStats from "@/components/spotify-stats";
 
 export default function AboutPage() {
   return (
@@ -10,6 +11,7 @@ export default function AboutPage() {
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
         <div className="flex-1">
           <AboutContent />
+          <SpotifyStats />
           <WakaTimeStats />
         </div>
         <div className="flex flex-col gap-8 w-full lg:w-auto">
