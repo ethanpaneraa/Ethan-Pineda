@@ -53,7 +53,7 @@ export const projectItems: ExperienceItem[] = [
     description:
       "Built a scalable telemedicine platform connecting immigrants with native-speaking mental health specialists.",
     category: "work",
-    href: "https://www.salesforce.com",
+    href: "https://github.com/orgs/FTL-HomeHeart/repositories",
   },
   {
     title: "Safety-Based Wearable Technology",
