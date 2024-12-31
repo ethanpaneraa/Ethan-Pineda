@@ -10,14 +10,14 @@ export default function Home() {
         <div className="min-h-screen bg-background">
           <ASCIIBackground />
           <div className="absolute inset-0 bg-background/60" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
             <CardLayout>
               <ShortBio />
-              <div className="py-2 mt-4 flex flex-col justify-center items-center gap-4 text-xs md:text-sm">
+              <div className="py-2 mt-4 flex flex-col justify-center items-center gap-2 text-xs md:text-sm">
+                <HomePageNavigationBar />
                 <p className="text-xs">
                   click or press on your keyboard to navigate
                 </p>
-                <HomePageNavigationBar />
               </div>
             </CardLayout>
           </div>
