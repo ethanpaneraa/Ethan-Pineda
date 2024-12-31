@@ -7,7 +7,7 @@ export function ExperienceGrid() {
       <SectionList
         title="work"
         items={workItems}
-        viewAllHref="experience"
+        viewAllHref="/experience"
         viewAllText="all experiences"
       />
       <SectionList

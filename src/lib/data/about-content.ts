@@ -1,5 +1,5 @@
 import { LayoutTemplate, Server, Container } from "lucide-react";
-
+import type { ExperienceItem } from "@/lib/data/experience";
 export const technologies = [
   {
     title: "frontend",
@@ -18,37 +18,52 @@ export const technologies = [
   },
 ];
 
-export const workItems = [
+export const workItems: ExperienceItem[] = [
   {
-    title: "salesforce",
-    role: "software engineer intern",
-    period: "june 2024 - september 2024",
+    title: "Software Engineer Intern",
+    organization: "Salesforce",
+    role: "Data Cloud Intern",
+    period: "June 2024 - September 2024",
+    location: "San Francisco, CA",
     description:
-      "data cloud intern working on building and scaling data infrastructure solutions",
+      "Data Cloud Intern working on building and scaling data infrastructure solutions.",
+    category: "work",
     href: "https://www.salesforce.com",
   },
   {
-    title: "salesforce",
-    role: "full stack software engineer intern",
-    period: "june 2023 - august 2023",
+    title: "Full Stack Software Engineer Intern",
+    organization: "Salesforce",
+    role: "FTL Program Intern",
+    period: "June 2023 - August 2023",
+    location: "San Francisco, CA",
     description:
-      "selected for ftl program, led development of telemedicine application using react.js and node.js",
+      "Selected for Salesforce's FTL Program, led a team to develop a Telemedicine application using React.js and Node.js, and conducted Agile sprints and standups.",
+    category: "work",
     href: "https://www.salesforce.com",
   },
 ];
 
-export const projectItems = [
+export const projectItems: ExperienceItem[] = [
   {
-    title: "create-t3-app",
-    role: "creator and maintainer",
+    title: "Research: Safety-Based Wearable Technology",
+    organization: "Ka moamoa Lab",
+    role: "Research Assistant",
+    period: "September 2023 - Present",
+    location: "Evanston, IL",
     description:
-      "open-source project for initializing full-stack next.js apps. 24k+ stars, 200+ contributors",
-    href: "https://create.t3.gg",
+      "Collaborated on safety-based wearable technology using machine learning for threat detection, developed a Flutter app for user alerts, and optimized processing for device efficiency.",
+    category: "research",
+    href: "https://kamoamoa.northwestern.edu",
   },
   {
-    title: "mini-git",
-    role: "creator",
-    description: "simplified version of git from scratch",
-    href: "https://github.com/nexxeln/mini-git",
+    title: "Learning Analytics Platform",
+    organization: "tiilt Lab",
+    role: "Research Assistant",
+    period: "March 2022 - Present",
+    location: "Evanston, IL",
+    description:
+      "Worked with the BLINC project to improve a learning analytics platform for students and educators, spearheaded transition from Angular to React, and implemented new UI/UX features.",
+    category: "research",
+    href: "https://tiilt.northwestern.edu",
   },
 ];

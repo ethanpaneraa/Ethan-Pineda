@@ -1,5 +1,3 @@
-import { Building2, GraduationCap, Users, BookOpen, Heart } from "lucide-react";
-
 export interface ExperienceItem {
   title: string;
   organization: string;

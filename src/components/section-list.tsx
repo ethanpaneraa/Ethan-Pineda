@@ -1,20 +1,13 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import type { ExperienceItem } from "@/lib/data/experience";
 
-export type Item = {
+interface SectionListProps {
   title: string;
-  href: string;
-  role: string;
-  period?: string;
-  description: string;
-};
-
-type SectionListProps = {
-  title: string;
-  items: Item[];
-  viewAllHref?: string;
-  viewAllText?: string;
-};
+  items: ExperienceItem[];
+  viewAllHref: string;
+  viewAllText: string;
+}
 
 export function SectionList({
   title,
@@ -28,9 +21,13 @@ export function SectionList({
         <span className="text-textAccent mr-2">*</span> {title}
       </h2>
       <div className="space-y-8">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <div key={item.title} className="group">
-            <Link href={item.href} target="_blank">
+            <Link
+              href={item.href || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h3 className="text-xl font-semibold mb-1 text-white group-hover:text-textAccent transition-colors duration-200">
                 {item.title}
               </h3>
