@@ -39,7 +39,7 @@ export function CodingStatus() {
     };
 
     fetchStatus();
-    const interval = setInterval(fetchStatus, 120 * 1000);
+    const interval = setInterval(fetchStatus, 300 * 1000);
 
     return () => clearInterval(interval);
   }, []);

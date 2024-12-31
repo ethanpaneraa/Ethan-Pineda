@@ -20,7 +20,9 @@ export async function GET() {
           Authorization: `Basic ${Buffer.from(API_KEY).toString("base64")}`,
           Accept: "application/json",
         },
-        cache: "no-store",
+        next: {
+          revalidate: 300,
+        },
       }
     );
 
@@ -29,7 +31,6 @@ export async function GET() {
     }
 
     const data = await response.json();
-    console.log("Stats data:", data);
 
     const isActive = data.data?.total_seconds > 0;
     const currentEditor = data.data?.editors?.[0]?.name || null;
