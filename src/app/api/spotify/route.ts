@@ -38,14 +38,14 @@ export async function GET() {
           next: { revalidate: 30 },
         }),
         fetch(
-          "https://api.spotify.com/v1/me/top/tracks?limit=5&time_range=short_term",
+          "https://api.spotify.com/v1/me/top/tracks?limit=3&time_range=short_term",
           {
             headers: { Authorization: `Bearer ${access_token}` },
             next: { revalidate: 3600 },
           }
         ),
         fetch(
-          "https://api.spotify.com/v1/me/top/artists?limit=5&time_range=short_term",
+          "https://api.spotify.com/v1/me/top/artists?limit=3&time_range=short_term",
           {
             headers: { Authorization: `Bearer ${access_token}` },
             next: { revalidate: 3600 },

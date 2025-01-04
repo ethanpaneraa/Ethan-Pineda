@@ -108,7 +108,7 @@ export default function SpotifyStats() {
             {"> "}top artists this month
           </h3>
           <div className="space-y-3">
-            {topArtists.map((artist, index) => (
+            {topArtists?.map((artist, index) => (
               <a
                 key={artist.name}
                 href={artist.external_urls.spotify}

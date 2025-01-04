@@ -4,6 +4,7 @@ import { SocialLinks } from "@/components/about/social-links";
 import { CodingStatus } from "@/components/coding-status";
 import WakaTimeStats from "@/components/stats";
 import SpotifyStats from "@/components/spotify-stats";
+import KeyboardMetrics from "@/components/keyboard-metrics";
 import { Metadata } from "next";
 
 export default function AboutPage() {
@@ -13,6 +14,7 @@ export default function AboutPage() {
         <div className="flex-1">
           <AboutContent />
           <SpotifyStats />
+          <KeyboardMetrics />
           <WakaTimeStats />
         </div>
         <div className="flex flex-col gap-8 w-full lg:w-auto">

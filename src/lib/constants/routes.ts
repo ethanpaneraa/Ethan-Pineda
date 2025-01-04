@@ -2,7 +2,7 @@ export const ROUTES = {
   ABOUT: "/about",
   EXPERINECE: "/experience",
   HOME: "/",
-  BLOG: "https://blog-chi-neon-82.vercel.app/",
+  BLOG: "https://ethanpinedaa.blog/",
   PROJECTS: "/projects",
   TOOLS: "/tools",
 } as const;
