@@ -30,10 +30,12 @@ export default function ASCIIBackground() {
   }, [dimensions]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      width={dimensions.width}
-      height={dimensions.height}
-    />
+    <div className="opacity-30">
+      <canvas
+        ref={canvasRef}
+        width={dimensions.width}
+        height={dimensions.height}
+      />
+    </div>
   );
 }
