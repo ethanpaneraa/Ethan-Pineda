@@ -78,6 +78,13 @@ export default function ToolsPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ToolCard
+            title="MoErgo Glove80"
+            description="A split, ortholinear keyboard with cherry MX Brown switches."
+            category="input device"
+            icon={<Laptop className="w-5 h-5" />}
+            link="https://www.moergo.com/collections/glove80-keyboards/products/glove80-split-ergonomic-keyboard-revision-2?variant=47282998739217"
+          />
+          <ToolCard
             title="hhkb professional 2 type-s"
             description="premium mechanical keyboard with topre switches for the ultimate typing experience."
             category="input device"
