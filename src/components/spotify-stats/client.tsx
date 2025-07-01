@@ -31,41 +31,62 @@ interface SpotifyData {
   topArtists: Artist[];
 }
 
-export default function SpotifyStats() {
-  const [data, setData] = useState<SpotifyData | null>(null);
-  const [loading, setLoading] = useState(true);
+interface SpotifyStatsClientProps {
+  initialData: SpotifyData | null;
+}
+
+export function SpotifyStatsClient({ initialData }: SpotifyStatsClientProps) {
+  const [data, setData] = useState<SpotifyData | null>(initialData);
   const [error, setError] = useState<string | null>(null);
+  const [isUpdating, setIsUpdating] = useState(false);
 
   useEffect(() => {
     const fetchStats = async () => {
+      setIsUpdating(true);
       try {
         const response = await fetch("/api/spotify");
         if (!response.ok) {
           throw new Error("Failed to fetch stats");
         }
-        const data = await response.json();
-        setData(data);
+        const newData = await response.json();
+        setData(newData);
+        setError(null);
       } catch (err) {
+        console.error("Error fetching Spotify stats:", err);
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
-        setLoading(false);
+        setIsUpdating(false);
       }
     };
 
-    fetchStats();
-    const interval = setInterval(fetchStats, 30000);
+    const interval = setInterval(fetchStats, 300000);
     return () => clearInterval(interval);
   }, []);
 
-  if (loading) return <div className="p-4">Loading...</div>;
-  if (error) return <div className="p-4 text-red-500">Error: {error}</div>;
-  if (!data) return <div className="p-4">No data available</div>;
+  if (error) {
+    return <div className="p-4 text-red-500">Error: {error}</div>;
+  }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { current, topTracks, topArtists } = data;
+  if (!data) {
+    return (
+      <div className="border border-neutral-800 p-4 md:p-6">
+        <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
+          <span className="text-textAccent mr-2">*</span>
+          listening stats
+        </h2>
+        <div className="text-gray-400">No data available</div>
+      </div>
+    );
+  }
+
+  const { current, topArtists } = data;
 
   return (
-    <div className="border border-neutral-800 p-4 md:p-6">
+    <div
+      className={`border border-neutral-800 p-4 md:p-6 ${
+        isUpdating ? "opacity-75 transition-opacity" : ""
+      }`}
+    >
       <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
         <span className="text-textAccent mr-2">*</span>
         listening stats
@@ -102,6 +123,7 @@ export default function SpotifyStats() {
           </div>
         )}
       </div>
+
       <div className="space-y-6">
         <div>
           <h3 className="text-gray-400 text-xs md:text-sm mb-3 md:mb-4">

@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { Square } from "lucide-react";
 
@@ -13,8 +14,12 @@ interface CodingStatus {
   };
 }
 
-export function CodingStatus() {
-  const [status, setStatus] = useState<CodingStatus | null>(null);
+interface CodingStatusClientProps {
+  initialData: CodingStatus | null;
+}
+
+export function CodingStatus({ initialData }: CodingStatusClientProps) {
+  const [status, setStatus] = useState<CodingStatus | null>(initialData);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -27,7 +32,6 @@ export function CodingStatus() {
           throw new Error(data.error || "Failed to fetch status");
         }
 
-        console.log("Status data:", data);
         setStatus(data);
         setError(null);
       } catch (error) {
@@ -38,7 +42,6 @@ export function CodingStatus() {
       }
     };
 
-    fetchStatus();
     const interval = setInterval(fetchStatus, 300 * 1000);
 
     return () => clearInterval(interval);

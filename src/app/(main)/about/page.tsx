@@ -1,9 +1,9 @@
 import AboutContent from "@/components/about/about-content";
 import { ProfileImage } from "@/components/about/project-image";
 import { SocialLinks } from "@/components/about/social-links";
-import { CodingStatus } from "@/components/coding-status";
-import WakaTimeStats from "@/components/stats";
-import SpotifyStats from "@/components/spotify-stats";
+import { CodingStatusServer } from "@/components/coding-status";
+import WakapiStats from "@/components/wakatime";
+import { SpotifyStats } from "@/components/spotify-stats";
 import KeyboardMetrics from "@/components/keyboard-metrics";
 import { Metadata } from "next";
 
@@ -15,13 +15,13 @@ export default function AboutPage() {
           <AboutContent />
           <SpotifyStats />
           <KeyboardMetrics />
-          <WakaTimeStats />
+          <WakapiStats />
         </div>
         <div className="flex flex-col gap-8 w-full lg:w-auto">
           <ProfileImage />
           <div className="px-4 lg:px-0">
             <div className="py-8">
-              <CodingStatus />
+              <CodingStatusServer />
             </div>
             <SocialLinks />
           </div>

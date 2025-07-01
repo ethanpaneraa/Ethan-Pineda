@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 interface KeyboardMetrics {
@@ -16,13 +17,20 @@ interface MetricsResponse {
   data: KeyboardMetrics[];
 }
 
-export default function KeyboardMetrics() {
-  const [metrics, setMetrics] = useState<KeyboardMetrics[]>([]);
-  const [loading, setLoading] = useState(true);
+interface KeyboardMetricsDisplayProps {
+  initialData: KeyboardMetrics[] | null;
+}
+
+export function KeyboardMetricsDisplay({
+  initialData,
+}: KeyboardMetricsDisplayProps) {
+  const [metrics, setMetrics] = useState<KeyboardMetrics[]>(initialData || []);
   const [error, setError] = useState<string | null>(null);
+  const [isUpdating, setIsUpdating] = useState(false);
 
   useEffect(() => {
     const fetchMetrics = async () => {
+      setIsUpdating(true);
       try {
         const response = await fetch("/api/keyboard-metrics");
         if (!response.ok) {
@@ -30,19 +38,35 @@ export default function KeyboardMetrics() {
         }
         const data: MetricsResponse = await response.json();
         setMetrics(data.data);
+        setError(null);
       } catch (err) {
+        console.error("Error fetching keyboard metrics:", err);
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
-        setLoading(false);
+        setIsUpdating(false);
       }
     };
 
-    fetchMetrics();
+    // Start periodic updates after initial render (every 5 minutes)
+    const interval = setInterval(fetchMetrics, 5 * 60 * 1000);
+    return () => clearInterval(interval);
   }, []);
 
-  if (loading) return <div className="p-4">Loading...</div>;
-  if (error) return <div className="p-4 text-red-500">Error: {error}</div>;
-  if (!metrics.length) return <div className="p-4">No data available</div>;
+  if (error) {
+    return <div className="p-4 text-red-500">Error: {error}</div>;
+  }
+
+  if (!metrics.length) {
+    return (
+      <div className="border border-neutral-800 p-4 md:p-6">
+        <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
+          <span className="text-textAccent mr-2">*</span>
+          silly keyboard metrics{" "}
+        </h2>
+        <div className="text-gray-400">No data available</div>
+      </div>
+    );
+  }
 
   const currentMetrics = metrics[0];
 
@@ -55,7 +79,11 @@ export default function KeyboardMetrics() {
   };
 
   return (
-    <div className="border border-neutral-800 p-4 md:p-6">
+    <div
+      className={`border border-neutral-800 p-4 md:p-6 ${
+        isUpdating ? "opacity-75 transition-opacity" : ""
+      }`}
+    >
       <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
         <span className="text-textAccent mr-2">*</span>
         silly keyboard metrics{" "}
