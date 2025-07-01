@@ -1,6 +1,6 @@
 import { ScrambleText } from "@/components/scramble-text";
 import { MapPin, Building2 } from "lucide-react";
-import { CodingStatus } from "@/components/coding-status";
+import { CodingStatusServer } from "@/components/coding-status";
 
 export default function ShortBio() {
   return (
@@ -24,7 +24,7 @@ export default function ShortBio() {
       </div>
 
       <div className="flex items-center gap-2">
-        <CodingStatus />
+        <CodingStatusServer />
       </div>
 
       <div className="text-xs sm:text-sm md:text-base space-y-4 leading-relaxed">
