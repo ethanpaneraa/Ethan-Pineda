@@ -23,30 +23,35 @@ export function NavigationBar({
           shortcut={KEYBOARD_SHORTCUTS[ROUTES.HOME]}
           label="home"
           className={linkClassName}
+          prefetch={true}
         />
         <NavigationLink
           href={ROUTES.ABOUT}
           shortcut={KEYBOARD_SHORTCUTS[ROUTES.ABOUT]}
           label="about"
           className={linkClassName}
+          prefetch={true}
         />
         <NavigationLink
           href={ROUTES.EXPERINECE}
           shortcut={KEYBOARD_SHORTCUTS[ROUTES.EXPERINECE]}
           label="work"
           className={linkClassName}
+          prefetch={true}
         />
         <NavigationLink
           href={ROUTES.PROJECTS}
           shortcut={KEYBOARD_SHORTCUTS[ROUTES.PROJECTS]}
           label="projects"
           className={linkClassName}
+          prefetch={true}
         />
         <NavigationLink
           href={ROUTES.TOOLS}
           shortcut={KEYBOARD_SHORTCUTS[ROUTES.TOOLS]}
           label="tools"
           className={linkClassName}
+          prefetch={true}
         />
         <NavigationLink
           href={ROUTES.BLOG}
