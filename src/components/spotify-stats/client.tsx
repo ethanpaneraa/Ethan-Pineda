@@ -79,7 +79,7 @@ export function SpotifyStatsClient({ initialData }: SpotifyStatsClientProps) {
     );
   }
 
-  const { current, topTracks, topArtists } = data;
+  const { current, topArtists } = data;
 
   return (
     <div
