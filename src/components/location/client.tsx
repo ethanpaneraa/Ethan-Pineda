@@ -42,6 +42,27 @@ export function LocationStatus({ initialData }: LocationStatusClientProps) {
     return () => clearInterval(interval);
   }, []);
 
+  const handleLocationClick = () => {
+    if (!location) return;
+    const query = `${location.city}, ${location.region}`;
+    const encodedQuery = encodeURIComponent(query);
+    const mapsAppUrl = `maps://?q=${encodedQuery}`;
+    const webMapsUrl = `https://maps.apple.com/?q=${encodedQuery}`;
+
+    const isAppleDevice = /iPad|iPhone|iPod|Macintosh/.test(
+      navigator.userAgent
+    );
+
+    if (isAppleDevice) {
+      window.location.href = mapsAppUrl;
+      setTimeout(() => {
+        window.open(webMapsUrl, "_blank");
+      }, 1000);
+    } else {
+      window.open(webMapsUrl, "_blank");
+    }
+  };
+
   if (error) {
     return <div className="text-red-500 text-sm">Error: {error}</div>;
   }
@@ -53,9 +74,13 @@ export function LocationStatus({ initialData }: LocationStatusClientProps) {
       <div className="flex items-center space-x-2">
         <span className="text-sm">
           currently in{" "}
-          <span className="text-textAccent font-semibold">
+          <button
+            onClick={handleLocationClick}
+            className="text-textAccent font-semibold hover:underline cursor-pointer transition-all duration-200 hover:opacity-80"
+            title={`Open ${location.display} in Apple Maps`}
+          >
             {location.display}
-          </span>
+          </button>
         </span>
       </div>
     </div>
