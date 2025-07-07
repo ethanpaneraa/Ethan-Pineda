@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { ExperienceItem } from "@/lib/data/experience";
+import type { ProjectItem } from "@/lib/data/projects";
 
 interface SectionListProps {
   title: string;
-  items: ExperienceItem[];
+  items: ExperienceItem[] | ProjectItem[];
   viewAllHref: string;
   viewAllText: string;
 }

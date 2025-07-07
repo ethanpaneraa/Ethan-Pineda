@@ -26,6 +26,7 @@ export interface ProjectItem {
   achievements: string[];
   technologies: string[];
   href: string;
+  period?: string;
 }
 
 export const projectItems: ProjectItems = {
