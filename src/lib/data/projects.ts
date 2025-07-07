@@ -19,6 +19,15 @@ export type ProjectItems = {
   [K in ProjectCategory]: ProjectCardProps[];
 };
 
+export interface ProjectItem {
+  title: string;
+  role: string;
+  description: string;
+  achievements: string[];
+  technologies: string[];
+  href: string;
+}
+
 export const projectItems: ProjectItems = {
   webApplications: [
     {

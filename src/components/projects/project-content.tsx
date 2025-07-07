@@ -39,9 +39,22 @@ export default function ProjectsContent() {
           </span>
         </h1>
         <p className="text-gray-300 leading-relaxed animate-fade-in-up">
-          here&apos;s a collection of projects i&apos;ve worked on, ranging from
-          web applications and games to machine learning experiments. each
-          project represents a unique challenge and learning experience.
+          this is a collection of projects that i&apos;ve worked on, ranging
+          from web applications and games to machine learning experiments. each
+          project represents a unique challenge and learning experience. many of
+          these projects are open source and can be found on my{" "}
+          <a
+            href="github.com/ethanpaneraa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-textAccent"
+          >
+            github
+          </a>
+          <br />
+          <br />
+          you can also find more details about each project on their respective
+          github repositories.
         </p>
       </div>
 

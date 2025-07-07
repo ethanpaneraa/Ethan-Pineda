@@ -1,5 +1,6 @@
 import { LayoutTemplate, Server, Container } from "lucide-react";
 import type { ExperienceItem } from "@/lib/data/experience";
+import type { ProjectItem } from "@/lib/data/projects";
 export const technologies = [
   {
     title: "frontend",
@@ -43,27 +44,38 @@ export const workItems: ExperienceItem[] = [
   },
 ];
 
-export const projectItems: ExperienceItem[] = [
+export const projectItems: ProjectItem[] = [
   {
-    title: "HomeHeart Telemedicine Platform",
-    organization: "Salesforce",
-    role: "FTL Program Intern",
-    period: "June 2023 - August 2023",
-    location: "San Francisco, CA",
+    title: "Mayfest Productions Learning App",
+    role: "Full Stack Developer",
     description:
-      "Built a scalable telemedicine platform connecting immigrants with native-speaking mental health specialists.",
-    category: "work",
-    href: "https://github.com/orgs/FTL-HomeHeart/repositories",
+      "A full-stack web app that allows for new members to the technology team of Mayfest Productions to learn about the organization and its technology stack.",
+    achievements: [
+      "Connected with Spotify API to display personalized playlists and userdata",
+      "Created a reciept-like system for users to download an image to share their music taste on social media",
+    ],
+    technologies: ["Next.js", "Tailwind CSS", "shadcn/ui", "Spotify API"],
+    href: "https://mayfest-learning-app.vercel.app/",
   },
   {
-    title: "Full-Stack Project Template",
-    organization: "Develop & Innovate for Social Change",
-    role: "Technical Lead",
-    period: "May 2024 - Present",
-    location: "Evanston, IL",
+    title: "HomeHeart",
+    role: "Full Stack Developer",
     description:
-      "Developed a full-stack template for students to use in the DISCover program to build their client projects.",
-    category: "work",
-    href: "https://github.com/disc-template?tab=repositories",
+      "A telemedicine platform that connects immigrant patients to mental health specialists from their native countries.",
+    achievements: [
+      "Built a scalable telemedicine platform connecting immigrants with native-speaking mental health specialists",
+      "Implemented secure video conferencing and scheduling features",
+      "Developed machine learning algorithms for specialist matching",
+    ],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Python",
+      "Flask",
+      "Sci-kit Learn",
+    ],
+    href: "https://github.com/orgs/FTL-HomeHeart/repositories",
   },
 ];
