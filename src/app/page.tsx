@@ -15,16 +15,6 @@ export default function Home() {
               <ShortBio />
               <div className="py-2 mt-4 flex flex-col justify-center items-center gap-2 text-xs md:text-sm">
                 <HomePageNavigationBar />
-                <p className="text-xs">
-                  <span className="underline decoration-textAccent underline-offset-8 decoration-from-font">
-                    click
-                  </span>{" "}
-                  or{" "}
-                  <span className="underline decoration-textAccent underline-offset-8 decoration-from-font">
-                    press
-                  </span>{" "}
-                  on your keyboard to navigate
-                </p>
               </div>
             </CardLayout>
           </div>

@@ -1,6 +1,7 @@
 import { ScrambleText } from "@/components/scramble-text";
 import { MapPin, Building2 } from "lucide-react";
 import { CodingStatusServer } from "@/components/coding-status";
+import Link from "next/link";
 
 export default function ShortBio() {
   return (
@@ -29,18 +30,28 @@ export default function ShortBio() {
 
       <div className="text-xs sm:text-sm md:text-base space-y-4 leading-relaxed">
         <p>
-          hey there, i&apos;m a current undergraduate senior at northwestern
-          university, concurrently pursuing a bachelors and masters degree in
-          computer science with a minor in latino and latina studies. after
-          graduation, i will be working as a software engineer at salesforce in
-          san francisco starting in september twenty-twenty-five. i will be
-          contributing to the data cloud platform.
+          i&apos;m a software engineer and a recent graduate from northwestern
+          university where i did my undergraduate studies in computer science
+          and latino and latina studies. now, i work full time as a software
+          engineer at salesforce data cloud. i have a huge passion for building
+          software. many of the things that i build are open source are can be
+          found in the{" "}
+          <Link href="/projects" className="text-textAccent">
+            projects page
+          </Link>{" "}
+          on my website.
         </p>
         <p>
-          my interest lie in distributed systems, embedded systems, and computer
-          systems. more generally, i&apos;m interested in building performant,
-          scalable, and reliable systems that can be used to solve real-world
-          problems.
+          my interest in software engineering lie in distributed systems,
+          embedded systems, and computer systems. more generally, i&apos;m
+          interested in building performant, scalable, and reliable systems.
+        </p>
+        <p>
+          if you&apos;d like to get in touch, ask me a question, or just to say
+          hi, then you can find my contact info on the{" "}
+          <Link href="about" className="text-textAccent">
+            about page
+          </Link>
         </p>
       </div>
     </div>
