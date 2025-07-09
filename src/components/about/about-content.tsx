@@ -16,7 +16,7 @@ export default function AboutContent() {
 
         <div className="space-y-4">
           <p className="leading-relaxed animate-fade-in-up">
-            i&apos; a first-generation mexican-american software engineer, born
+            i&apos;m a first-generation mexican-american software engineer, born
             and raised in the west side of chicago. i am the first in my family
             to pursue a career in technology as a software engineer and many of
             the things that i have done in my life have been too pave the way
