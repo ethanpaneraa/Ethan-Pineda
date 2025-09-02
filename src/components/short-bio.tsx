@@ -13,7 +13,7 @@ export default function ShortBio() {
       <div className="flex items-center gap-2">
         <MapPin className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" />
         <span className="text-sm sm:text-base">
-          <ScrambleText text="evanston, illinois" />
+          <ScrambleText text="san francisco, california" />
         </span>
       </div>
 
