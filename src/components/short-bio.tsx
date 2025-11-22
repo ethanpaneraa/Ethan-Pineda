@@ -20,7 +20,7 @@ export default function ShortBio() {
       <div className="flex items-center gap-2">
         <Building2 className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" />
         <span className="text-sm sm:text-base">
-          <ScrambleText text="incoming software engineer @ salesforce" />
+          <ScrambleText text="software engineer @ salesforce" />
         </span>
       </div>
 
