@@ -11,15 +11,24 @@ export interface ExperienceItem {
 
 export const workExperience: ExperienceItem[] = [
   {
+    title: "Software Engineer",
+    organization: "Salesforce",
+    role: "Software Engineer",
+    period: "September 2025 - Present",
+    location: "San Francisco, CA",
+    description: "unstructured data for salesforce data cloud",
+    category: "work",
+    href: "https://help.salesforce.com/s/articleView?id=data.c360_a_unstructured_data_about.htm&type=5",
+  },
+  {
     title: "Software Engineer Intern",
     organization: "Salesforce",
     role: "Data Cloud Intern",
     period: "June 2024 - September 2024",
     location: "San Francisco, CA",
-    description:
-      "Data Cloud Intern working on building and scaling data infrastructure solutions.",
+    description: "built a distributed web crawler for salesforce data cloud.",
     category: "work",
-    href: "https://www.salesforce.com",
+    href: "https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-web-content-crawler-connector.html",
   },
   {
     title: "Full Stack Software Engineer Intern",
