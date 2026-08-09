@@ -10,6 +10,412 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  overflow-x: clip;
+}
+
+.portfolio-home {
+  --page-background: #111;
+  --page-foreground: #f0f0f0;
+  min-height: 100svh;
+  color: var(--page-foreground);
+  background: var(--page-background);
+  width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+
+.portfolio-hero {
+  box-sizing: content-box;
+  max-width: 1510px;
+  height: 50svh;
+  padding: 10vw 10vw 2.5vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  animation: portfolio-fade-in 2s;
+  animation-fill-mode: both;
+}
+
+.portfolio-ascii {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: calc(50svh + 12.5vw);
+  overflow: hidden;
+  opacity: 0.09;
+  pointer-events: none;
+}
+
+.portfolio-ascii canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-hero h1 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8vw;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.3em;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-hero h1 a {
+  color: inherit;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.portfolio-hero h1 a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0.05em;
+  left: 2px;
+  height: 4px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+.portfolio-content {
+  box-sizing: content-box;
+  max-width: 1510px;
+  padding: 2vw 10vw 5vw;
+  position: relative;
+  z-index: 1;
+  background: var(--page-background);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 1.33333vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  animation: portfolio-fade-in 1.2s;
+  animation-delay: 400ms;
+  animation-fill-mode: both;
+}
+
+/* The reference layout uses browser-default paragraph and list spacing. */
+.portfolio-content p {
+  margin-block: 1em;
+}
+
+.portfolio-status {
+  text-transform: uppercase;
+}
+
+.portfolio-footer {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
+.portfolio-footer > div {
+  flex: 1;
+}
+
+.portfolio-list,
+.portfolio-horizontal-list {
+  margin-block: 1em;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-vertical-list {
+  margin-top: 0;
+}
+
+.portfolio-horizontal-list {
+  display: flex;
+}
+
+.portfolio-horizontal-list li {
+  margin-right: 1.2vw;
+}
+
+.portfolio-horizontal-list a::after,
+.portfolio-horizontal-list a:hover::after {
+  opacity: 0;
+}
+
+.no-margins {
+  margin: 0;
+}
+
+.portfolio-content a {
+  position: relative;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.portfolio-content a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.1em;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+.portfolio-content a:hover {
+  opacity: 0.5;
+  cursor: ne-resize;
+}
+
+.portfolio-content a:hover::after {
+  opacity: 0.7;
+}
+
+.age-counter {
+  position: relative;
+  cursor: default;
+}
+
+.age,
+.years-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 600ms ease;
+}
+
+.years-left {
+  opacity: 0;
+}
+
+.age-counter:hover .age {
+  opacity: 0;
+}
+
+.age-counter:hover .years-left {
+  opacity: 1;
+}
+
+@keyframes portfolio-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .portfolio-hero {
+    height: 50svh;
+    padding: 5vw;
+  }
+
+  .portfolio-content {
+    padding: 0 5vw 5vw;
+    font-size: 12px;
+    line-height: 1.3em;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .portfolio-footer {
+    flex-direction: column;
+  }
+
+  .portfolio-footer > div {
+    margin-block-end: 1em;
+  }
+
+  .portfolio-horizontal-list li {
+    margin-right: 2vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .portfolio-content {
+    font-size: 16px;
+    line-height: 1.3em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-hero,
+  .portfolio-footer {
+    animation: none;
+  }
+}
+
+.editorial-shell {
+  --editorial-background: #111;
+  --editorial-foreground: #f0f0f0;
+  --editorial-muted: #969696;
+  min-height: 100svh;
+  padding: 2vw 10vw 5vw;
+  color: var(--editorial-foreground);
+  background: var(--editorial-background);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 16px;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+}
+
+.editorial-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.editorial-nav > div {
+  gap: 1.4rem;
+}
+
+.editorial-nav-link,
+.editorial-footer a,
+.editorial-page a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 180ms ease;
+}
+
+.editorial-nav-link:hover,
+.editorial-footer a:hover,
+.editorial-page a:hover {
+  opacity: 0.5;
+}
+
+.editorial-page {
+  max-width: 1510px;
+  padding: 4rem 0 6rem;
+}
+
+.editorial-page > :first-child > h1,
+.editorial-page > h1,
+.editorial-page h1 {
+  color: var(--editorial-foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+}
+
+.editorial-page h1 .text-textAccent,
+.editorial-page h2 .text-textAccent {
+  display: none;
+}
+
+.editorial-page h2 {
+  padding-top: 0.8rem;
+  color: var(--editorial-foreground);
+  border-top: 1px solid #3a3a3a;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.editorial-page h3,
+.editorial-page .text-white {
+  color: var(--editorial-foreground);
+}
+
+.editorial-page p,
+.editorial-page .text-gray-300,
+.editorial-page .text-gray-400 {
+  color: var(--editorial-muted);
+}
+
+.editorial-page .text-textAccent,
+.editorial-page .group-hover\:text-textAccent:hover {
+  color: var(--editorial-foreground);
+}
+
+.editorial-page .border,
+.editorial-page .border-l {
+  border-color: #3a3a3a;
+}
+
+.editorial-page .rounded {
+  border-radius: 0;
+}
+
+.editorial-page .bg-gray-800\/50 {
+  background: transparent;
+  border: 1px solid #3a3a3a;
+}
+
+.editorial-page button {
+  border-color: #3a3a3a;
+  color: var(--editorial-muted);
+  border-radius: 0;
+}
+
+.editorial-page button:hover,
+.editorial-page button.border-accent {
+  color: var(--editorial-foreground);
+  border-color: var(--editorial-foreground);
+}
+
+.editorial-page .group {
+  transition: background 180ms ease;
+}
+
+.editorial-page .group:hover {
+  background: #1a1a1a;
+}
+
+.editorial-page .bg-textAccent {
+  background: var(--editorial-foreground);
+}
+
+.editorial-footer {
+  max-width: 1510px;
+  padding-top: 2rem;
+  border-top: 1px solid #3a3a3a;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.editorial-footer p {
+  margin: 0 0 0.5rem;
+}
+
+.editorial-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+@media (max-width: 760px) {
+  .editorial-shell {
+    padding: 1.5rem 5vw 3rem;
+    font-size: 12px;
+  }
+
+  .editorial-nav {
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+  }
+
+  .editorial-nav > div {
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+  }
+
+  .editorial-page {
+    padding: 2rem 0 4rem;
+  }
 }
 
 @layer base {

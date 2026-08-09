@@ -30,7 +30,7 @@ export default function ProjectsContent() {
         ][]);
 
   return (
-    <main className="max-w-4xl mx-auto px-4 py-8">
+    <main className="editorial-page">
       <div className="space-y-6 mb-16">
         <h1 className="text-4xl font-bold text-white animate-fade-in">
           <span className="inline-block">

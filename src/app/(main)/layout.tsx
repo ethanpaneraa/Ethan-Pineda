@@ -6,12 +6,10 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <Navbar />
-        {children}
-        <Footer />
-      </div>
-    </>
+    <div className="editorial-shell">
+      <Navbar />
+      {children}
+      <Footer />
+    </div>
   );
 }

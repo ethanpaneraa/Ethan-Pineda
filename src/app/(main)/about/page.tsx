@@ -10,7 +10,7 @@ import { Metadata } from "next";
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="editorial-page editorial-about">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
         <div className="flex-1">
           <AboutContent />
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

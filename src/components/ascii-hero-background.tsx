@@ -1,41 +1,54 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { useWindowDimensions } from "@/hooks/useWindowDimensions";
 import { ASCIIRenderer } from "@/components/ascii-renderer";
 
-export default function ASCIIBackground() {
+export default function ASCIIBackground({
+  className = "",
+  renderHeightOffsetVw = 0,
+}: {
+  className?: string;
+  renderHeightOffsetVw?: number;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const dimensions = useWindowDimensions();
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    const container = containerRef.current;
+    if (!canvas || !container) return;
 
-    canvas.width = dimensions.width;
-    canvas.height = dimensions.height;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const renderer = new ASCIIRenderer(ctx);
     let animationFrameId: number;
+    let renderer: ASCIIRenderer | null = null;
+
+    const resize = () => {
+      const { width, height } = container.getBoundingClientRect();
+      canvas.width = Math.floor(width);
+      canvas.height = Math.floor(
+        height + (window.innerWidth * renderHeightOffsetVw) / 100
+      );
+
+      const context = canvas.getContext("2d");
+      renderer = context ? new ASCIIRenderer(context) : null;
+    };
 
     const animate = () => {
-      renderer.render(canvas);
+      renderer?.render(canvas);
       animationFrameId = requestAnimationFrame(animate);
     };
 
+    const observer = new ResizeObserver(resize);
+    observer.observe(container);
+    resize();
     animate();
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [dimensions]);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [renderHeightOffsetVw]);
 
   return (
-    <div className="opacity-30">
-      <canvas
-        ref={canvasRef}
-        width={dimensions.width}
-        height={dimensions.height}
-      />
+    <div ref={containerRef} className={`opacity-30 ${className}`} aria-hidden="true">
+      <canvas ref={canvasRef} />
     </div>
   );
 }
